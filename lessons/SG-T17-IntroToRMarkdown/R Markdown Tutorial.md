@@ -31,7 +31,8 @@ For example: how to calculate two plus two:
 
     ```{r}
     x <- 2 + 2
-    print(x)```
+    print(x)
+    ```
 
 
 Adding arguments to `` "```{r}" `` can further modify the way your code is presented. `` "eval = FALSE" `` will present your code without the associated output.
