@@ -214,6 +214,7 @@ Therefore, **after this line**, no more code will appear in your knitted output.
 
 At any point you can override the parameters you used in your document by knitting your document using the following code. In this example the parameters provided are the ones to be over-ridden from the values specified in the **YAML** header. Any parameters that exist in the **YAML** header, that are not mentioned in this output will behave as specified in the header.
 
+
 ```
 #rmarkdown::render("MyDocument.Rmd", params = list(
 #  year = 2017,
