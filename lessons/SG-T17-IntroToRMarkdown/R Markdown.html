@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://rmarkdown.rstudio.com/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="generator" content="pandoc">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+
+
+
+<title>R Markdown</title>
+
+<script async="" src="./R Markdown_files/analytics.js.download"></script><script src="./R Markdown_files/20828fb4429b74fbb42cae934a7b85b1a5f45709.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./R Markdown_files/cosmo.min.css">
+<script src="./R Markdown_files/bootstrap.min.js.download"></script>
+<script src="./R Markdown_files/21f975749e88bd0ac60415c30fe412b614c93fd5.js.download"></script>
+<link rel="stylesheet" href="./R Markdown_files/textmate.css">
+<script src="./R Markdown_files/highlight.js.download"></script>
+
+<meta name="description" content="Turn your analyses into high quality documents, reports, presentations and dashboards with R Markdown. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL. R Markdown supports a reproducible workflow for dozens of static and dynamic output formats including HTML, PDF, MS Word, Beamer, HTML5 slides, Tufte-style handouts, books, dashboards, shiny applications, scientific articles, websites, and more.">
+
+<link rel="icon" type="image/png" href="https://rmarkdown.rstudio.com/images/favicon.png">
+
+<script type="text/javascript" src="./R Markdown_files/a6ff46e50af832f49de1cede3fc40d57f2dfe537.js.download"></script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20375833-3', 'auto', {'allowLinker': true});
+ga('require', 'linker');
+ga('linker:autoLink', ['rstudio.com', 'rstudio.github.io', 'rviews.rstudio.com', 'community.rstudio.com', 'rpubs.rstudio.com', 'environments.rstudio.com', 'rstudio.org', 'dailies.rstudio.com', 'pages.rstudio.com', 'db.rstudio.com', 'solutions.rstudio.com', 'docs.rstudio.com', 'spark.rstudio.com', 'shiny.rstudio.com', 'education.rstudio.com', 'rstudio.cloud', 'shinyapps.io', 'team-admin.rstudio.com', 'blog.rstudio.com', 'support.rstudio.com', 'blogs.rstudio.com', 'keras.rstudio.com', 'swag.rstudio.com', 'tensorflow.rstudio.com', 'packagemanager.rstudio.com'] );
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="./R Markdown_files/rmarkdown.css">
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+<link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.a8dc02def3107413d47189b1bce61bd9.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.847783fd9a0d1b9b80a706571a35d786.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.f86a840f3451e5487a277f1443585291.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"></head>
+
+<body>
+
+
+<div class="footerPushDown">
+
+
+
+
+<div id="rStudioHeader" class="">
+  <div class="innards bandContent">
+    <div>
+      <a class="productName" href="https://rmarkdown.rstudio.com/index.html">R Markdown</a>
+      <div class="rStudio"><span class="light">from </span> <a href="https://www.rstudio.com/" target="_blank"><div class="logo"></div></a></div>
+    </div>
+
+    <div id="menu">
+      <div id="menuToggler"></div>
+      <div id="menuItems">
+        <a class="menuItem" href="https://rmarkdown.rstudio.com/lesson-1.html">Get Started</a>
+        <a class="menuItem" href="https://rmarkdown.rstudio.com/gallery.html">Gallery</a>
+        <a class="menuItem" href="https://rmarkdown.rstudio.com/formats.html">Formats</a>
+        <a class="menuItem" href="https://rmarkdown.rstudio.com/articles.html">Articles</a>
+        <a class="menuItem" href="https://bookdown.org/yihui/rmarkdown/" target="_blank">Book</a>
+        <a class="menuItem" href="https://rmarkdown.rstudio.com/docs/">References</a>
+        <a class="menuItem gitHub" href="https://github.com/rstudio/rmarkdown" target="_blank"></a>
+        <a class="menuItem gitHubText" href="https://github.com/rstudio/rmarkdown" target="_blank">Source on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+#TOC {
+  margin-left: 35px;
+  margin-top: 90px;
+}
+</style>
+
+<script type="text/javascript">
+$(".main-container").removeClass("main-container").removeClass("container-fluid").addClass("footerPushDown");
+</script>
+
+
+<div id="pageContent" class="">
+  <div class="articleBandContent">
+
+<style type="text/css">
+.title {
+  display: none;
+}
+#disqus_thread {
+  display: none;
+}
+</style>
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">R Markdown</h1>
+
+</div>
+
+
+<script type="text/javascript">
+$("#rStudioHeader").removeClass("alwaysShrunk");
+$("#pageContent").removeClass("standardPadding");
+</script>
+
+
+<div id="homeContent">
+  <div class="band full blue first rightText">
+    <div class="bandContent vCenter">
+      <div class="blurb">
+        <div class="tagline">Analyze. Share. Reproduce.</div>
+        <div>Your data tells a story. Tell it with R Markdown. Turn your analyses into high quality documents, reports, presentations and dashboards.</div>
+      </div>
+    </div>
+    <img class="imageOne" src="./R Markdown_files/bandone.png">
+  </div>
+
+  <div class="band full gray1 second leftText">
+    <div class="bandContent vCenter">
+      <div class="blurb">
+        <div>R Markdown documents are fully reproducible. Use a productive <a href="https://bookdown.org/yihui/rmarkdown/notebook.html" target="_blank">notebook interface</a> to weave together narrative text and code to produce elegantly formatted output. Use <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html" target="_blank">multiple languages</a> including R, Python, and SQL.</div>
+      </div>
+    </div>
+    <img class="imageTwo" src="./R Markdown_files/bandtwo2.png">
+  </div>
+
+  <div class="band full third rightText">
+    <img class="imageThree" src="./R Markdown_files/bandthree2.png">
+    <div class="bandContent vCenter">
+      <div class="blurb">
+        <div>
+          R Markdown supports dozens of static and dynamic output formats including
+          <a href="https://bookdown.org/yihui/rmarkdown/html-document.html" target="_blank">HTML</a>, <a href="https://bookdown.org/yihui/rmarkdown/pdf-document.html" target="_blank">PDF</a>, <a href="https://bookdown.org/yihui/rmarkdown/word-document.html" target="_blank">MS Word</a>, <a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html" target="_blank">Beamer</a>, <a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html" target="_blank">HTML5 slides</a>, <a href="https://bookdown.org/yihui/rmarkdown/tufte-handouts.html" target="_blank">Tufte-style handouts</a>, <a href="https://bookdown.org/" target="_blank">books</a>, <a href="https://rmarkdown.rstudio.com/flexdashboard/">dashboards</a>,
+          <a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html" target="_blank">shiny applications</a>, <a href="https://github.com/rstudio/rticles" target="_blank">scientific articles</a>, <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" target="_blank">websites</a>, and more.
+        </div>
+        <div class="actions">
+          <div><a href="https://rmarkdown.rstudio.com/lesson-1.html"><button class="bigButton getStarted">Get Started</button></a></div>
+          <div><a href="https://rmarkdown.rstudio.com/gallery.html"><button class="bigButton gallery">See Gallery</button></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band full gray2 fourth leftText">
+    <div class="bandContent vCenter">
+      <div class="blurb">
+        <div>Need R Markdown in production? Learn how to <a href="https://docs.rstudio.com/connect/user/publishing/" target="_blank">publish</a> and <a href="https://docs.rstudio.com/connect/user/scheduling/" target="_blank">schedule</a> reports, <a href="https://docs.rstudio.com/connect/user/param-rmarkdown/" target="_blank">enable self-service customization</a>, and distribute beautiful emails using <a href="https://rstudio.com/products/connect" target="_blank"> RStudio Connect</a>.
+        </div>
+      </div>
+    </div>
+    <img class="imageFour" src="./R Markdown_files/band4.png">
+  </div>
+</div>
+
+
+
+  </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<div id="rStudioFooter" class="band full">
+<div class="bandContent">
+  <div id="copyright">© Copyright 2016 - 2020 RStudio, PBC</div>
+  <div id="logos">
+    <a href="https://twitter.com/rstudio" class="footerLogo twitter" target="_blank"></a>
+    <a href="https://github.com/rstudio" class="footerLogo gitHub" target="_blank"></a>
+    <a href="https://www.linkedin.com/company/rstudio-pbc" class="footerLogo linkedIn" target="_blank"></a>
+    <a href="https://www.facebook.com/rstudioinc/" class="footerLogo facebook" target="_blank"></a>
+  </div>
+</div>
+</div>
+
+<!-- bizible -->
+<script type="text/javascript" src="./R Markdown_files/bizible.js.download" async=""></script>
+
+<!-- disqus -->
+<div id="disqus_thread" class="standardPadding"><iframe id="dsq-app3163" name="dsq-app3163" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./R Markdown_files/saved_resource.html" horizontalscrolling="no" verticalscrolling="no" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe></div>
+<script type="text/javascript" src="./R Markdown_files/disqus.js.download"></script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script type="text/javascript" src="./R Markdown_files/external-links.js.download"></script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<!--googleoff: all--><script type="text/javascript" async="" src="./R Markdown_files/embed.js.download"></script><!--googleon: all--><img src="./R Markdown_files/ipv" style="display: none;"><iframe style="display: none;" src="./R Markdown_files/saved_resource(1).html"></iframe><script>mendeleyWebImporter = { open: function () { window.postMessage('0.9208613949093523', 'https://rmarkdown.rstudio.com') } }</script></body></html>
