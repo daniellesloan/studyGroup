@@ -220,6 +220,7 @@ At any point you can override the parameters you used in your document by knitti
 #  region = "Asia",
 #  printcode = FALSE,
 #))
+
 ```
 
 ## Resources
