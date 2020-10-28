@@ -24,7 +24,7 @@ If you present r code as below, contained within back ticks and prefaced by 'r',
 
 Two plus two equals `r 2 + 2` 
 
-If you would prefer your code to show both the written input and the output you should contain it within `"```{r}"` and `"```"` as so...
+If you would prefer your code to show both the written input and the output you should contain it within ``"```{r}"`` and ``"```"`` as so...
 
 For example: how to calculate two plus two:
 
@@ -35,7 +35,7 @@ For example: how to calculate two plus two:
     ```
 
 
-Adding arguments to `` "```{r}" `` can further modify the way your code is presented. `` "eval = FALSE" `` will present your code without the associated output.
+Adding arguments to ``"```{r}"`` can further modify the way your code is presented. ``"eval = FALSE"`` will present your code without the associated output.
 
 For example: how to calculate two plus two...
 
