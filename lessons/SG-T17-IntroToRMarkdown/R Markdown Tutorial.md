@@ -24,27 +24,39 @@ If you present r code as below, contained within back ticks and prefaced by 'r',
 
 Two plus two equals `r 2 + 2` 
 
-If you would prefer your code to show both the written input and the output you should contain it within "```{r}" and "```" as so...
+If you would prefer your code to show both the written input and the output you should contain it within `"```{r}"` and `"```"` as so...
 
 For example: how to calculate two plus two:
+
+```
+
 ```{r}
 x <- 2 + 2
-print(x)
+print(x)```
 ```
-Adding arguments to "```{r}" can further modify the way your code is presented. "eval = FALSE" will present your code without the associated output.
+
+Adding arguments to `"```{r}"` can further modify the way your code is presented. `"eval = FALSE"` will present your code without the associated output.
 
 For example: how to calculate two plus two...
+
+```
+
 ```{r eval = FALSE}
 x <- 2 + 2
-print(x)
+print(x)```
 ```
-"echo = FALSE" will not present your code but will show the associated output.
+
+`"echo = FALSE"` will not present your code but will show the associated output.
 
 For example: how to calculate two plus two...
+
+```
+
 ```{r echo = FALSE}
 x <- 2 + 2
-print(x)
+print(x)```
 ```
+
 Here are some additional arguments you may be interested in using. Remember that each argument will have a default value so you will only need to modify it if you want to change away from the defaults which are listed below:
 
 Argument             | Default         | Effect                                   
