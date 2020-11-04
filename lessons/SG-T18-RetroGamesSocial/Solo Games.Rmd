@@ -1,0 +1,68 @@
+---
+title: "Other games in R"
+author: "Katie August"
+date: "31/10/2020"
+output: html_document
+---
+
+Here you can find code for some solo games that can be played within R. Have fun, and let the group know any high scores!
+
+## Required packages
+```{r}
+# Don't forget you may need to install these packages using install.packages("package name")
+
+library(fun)
+```
+
+## Minesweeper
+
+Minesweeper is a single-player puzzle video game. The objective of the game is to clear a rectangular board containing hidden "mines" or bombs without detonating any of them, with help from clues about the number of neighboring mines in each field.
+
+Controls: Click the left mouse button to dig in an area, and right button to mark or unmark the area with flags.
+```{r}
+# Run this line to open an interactive graphics window
+X11(type="Xlib")
+
+# This line will open the game in the graphics window
+mine_sweeper(width = 10, height = 10, mines = 20, cheat = FALSE)
+
+```
+
+
+## Lights out
+
+By default, the white squares in the plot denote the lights that are on, and black ones for the off.
+When you click on a light, this light as well as the four neighbors will switch theirs status. Your
+mission is to close all the lights
+
+```{r}
+# Run this line to open an interactive graphics window
+X11(type="Xlib")
+
+# This line will open the game in the graphics window
+lights_out(
+width = 5,
+height = 5,
+steps = 3,
+cheat = FALSE,
+col.off = "black",
+col.on = "white",
+col.frame = "lightblue",
+seed = NULL
+)
+
+```
+
+## Sliding puzzle
+
+The aim of this game is to get the numbers 1-8 in order going lowest in the top left, going up row by row.
+
+```{r}
+# Run this line to open an interactive graphics window
+X11(type="Xlib")
+
+# This line will open the game in the graphics window
+
+sliding_puzzle(size = c(3, 3), bg = "lightblue", z = NULL)
+```
+

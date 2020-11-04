@@ -1,0 +1,50 @@
+---
+title: "Rcade Games"
+author: "Katie August"
+date: "31/10/2020"
+output: html_document
+---
+
+Here are some more solo games using a the r package Rcade. The first time you play the game, it will ask to be installed. Keep track of your high scores and share them with the group!
+
+```{r}
+devtools::install_github('RLesur/Rcade')
+```
+
+
+## 2048
+
+Use the arrow keys to move squares around the board. MAtch numbers together to get to 2048
+
+```{r}
+Rcade::games$`2048`
+```
+
+
+## Pacman!
+
+Pac-Man is a maze chase video game; the player controls the eponymous character through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts — Blinky (red), Pinky (pink), Inky (cyan), and Clyde (orange) — that pursue him. When all of the dots are eaten, the player advances to the next level. If Pac-Man makes contact with a ghost, he will lose a life; the game ends when all lives are lost. Each of the four ghosts have their own unique, distinct artificial intelligence (A.I.), or "personalities"; Blinky gives direct chase to Pac-Man, Pinky and Inky try to position themselves in front of Pac-Man, usually by cornering him, and Clyde will switch between chasing Pac-Man and fleeing from him.
+
+Use the arrow keys or click the arrows on the screen.
+
+```{r}
+Rcade::games$Pacman
+```
+
+## Spider Solitare
+
+The main purpose of the game is to remove all cards from the table, assembling them in the tableau before removing them.[6] Initially, 54 cards are dealt to the tableau in ten piles, face down except for the top cards. The tableau piles build down by rank, and in-suit sequences can be moved together. The 50 remaining cards can be dealt to the tableau ten at a time when none of the piles are empty.
+
+I had a few issues with the display of this game, make sure your viewer is as large as possible. The display on the right-hand side still looked a bit weird but the game played no problem.
+
+```{r}
+Rcade::games$SpiderSolitaire
+```
+
+## And more:
+
+Explore the other games available in this package using:
+```{r}
+Rcade::games
+```
+
