@@ -6,6 +6,7 @@ visible: true
 tags:
   # languages
   - misc
+  - r
   # levels
   - beginner
 ---
