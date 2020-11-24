@@ -6,7 +6,7 @@ output: html_document
 visible: true
 tags:
   # languages
-  - R
+  - r
   # levels
   - intermediate
 ---
