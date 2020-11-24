@@ -13,3 +13,5 @@ Anyone keen to learn!
 
 **What you need:** 
 Access to R. Available at: [The  Project for Statistical Computing](https://www.r-project.org/)
+[<Linear modelling>](<http://htmlpreview.github.io/?https://github.com/AberdeenStudyGroup/studyGroup/upload/gh-pages/lessons/SG-T18-Introtolinearmodel>)`
+
