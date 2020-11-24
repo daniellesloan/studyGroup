@@ -5,7 +5,7 @@ author: Deon Roos
 visible: true
 tags:
   # languages
-  - R
+  - r
   # levels
   - beginner
 ---
