@@ -2,7 +2,6 @@
 layout: page
 title: "Visualising Spatial Data in R"
 author: "Richard Hassall"
-output: html_document
 visible: true
 tags:
   # languages
