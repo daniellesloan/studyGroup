@@ -18,7 +18,7 @@ This was hosted as an online social event in November 2020, but we’ve uploaded
 The aim was simple: have a go at playing some `R`etro games. 
 
 
-<img src="../RGames_event.jpg" style="max-width:100%;"> 
+<img src="../RGames_event.jpg" style="max-width:100%;" class="center"> 
 
 **Requirements**
 
