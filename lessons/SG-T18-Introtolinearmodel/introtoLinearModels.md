@@ -365,10 +365,13 @@ However, does it seem like all variables are usefull in describing our relations
 To test this, we can either look at the p-value or use other means of testing such as AIC, BIC etc. 
 Here, I am going to use drop1 which gives me the AIC of models where each variable was dropped one by one. We will consider any variable with an increase in AIC of less than 2 in comparison to the original model  as "non-singificant". You could also have a look at the Pr(>Chi) which can be interpreted similarly to our p-value. 
 
+
     ```{r, model1 drop1, tidy=TRUE}
     drop1(model1,test="Chi") 
     # this gives you an overview if variables are significant. this is done by comparing models with all variables in the model and dropping each variable individually from the model. The Pr(>Chi) can be interpreted similar to the p-value. For AIC a conservative estimate is that if the AIC increases by more than 2 when a variable is dropped this variable explains some of the variation
     ```
+  
+
 ```
 Single term deletions
 
@@ -379,7 +382,7 @@ hangryness ~ time * choc_day
 time:choc_day  2   0.01445 754.35 -4133.5   0.9717
 ```
 
-As we can see time*choc_day does not seem to be significant/ does not explain any of our data (difference in AIC before and after dropping the variable ~0.01), so can be dropped. This means that no matter how much chocolate was consumed each morning, the rate at which hangryness increases with time is the same. 
+As we can see `time*choc_day` does not seem to be significant/ does not explain any of our data (difference in AIC before and after dropping the variable ~0.01), so can be dropped. This means that no matter how much chocolate was consumed each morning, the rate at which hangryness increases with time is the same. 
 
 Let's fit a model without the interaction and see what happens: 
 
@@ -387,6 +390,8 @@ Let's fit a model without the interaction and see what happens:
     model2<-lm(hangryness~time+choc_day,data=Data, na.action=na.omit) #Here I am fitting a model which investigates the effect of time and choc-day on hangryness separately
     summary(model2)
     ```
+      
+
 ```
 Call:
 lm(formula = hangryness ~ time + choc_day, data = Data, na.action = na.omit)
@@ -409,11 +414,14 @@ Multiple R-squared:  0.9695,	Adjusted R-squared:  0.9695
 F-statistic: 3.179e+04 on 3 and 2996 DF,  p-value: < 2.2e-16
 ```
 
+
 Looking at how we interpreted the output above, what would you conclude from this output? 
 
     ```{r}
     drop1(model2, test="Chi")
     ```
+
+
 ```
 
 Model:
@@ -426,6 +434,7 @@ choc_day  2    6128.9  6883.3  2495.4 < 2.2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
 
+
 Should we keep both time and choc-day in the model? 
 Answer: (both time and choc_day increase the AIC massively (deltaAIC>6000) and have a highly significant p-value)
 
@@ -435,6 +444,8 @@ Let's fit the same model but with bloodsugar instead of time:
     model3<-lm(hangryness~Blood_sugar+choc_day,data=Data, na.action=na.omit) #Here I am fitting a model which investigates the effect of time and choc-day on hangryness separately
     summary(model3)
     ```
+
+
 ```
 Call:
 lm(formula = hangryness ~ Blood_sugar + choc_day, data = Data, 
@@ -521,19 +532,6 @@ Now that you know how to check your data, fit a model, interpret the output and 
 
 ***
 ## Glossary
-
-    ```{r Glossary,echo=FALSE, warning=FALSE}
-    library("knitr")
-
-
-    Word<- c("Response/Dependent variable","Explanatory/independent variable","Residual", "Intercept","Coefficient")
-    Explanation<-c("The thing which is influenced by other factors or the environment (i.e. your y)","The thing which influences our responce variable (i.e. your x)", "difference between the model prediction (also called fitted data, i.e. what you would expect in a perfect world) and the observed data (i.e. what you observed in real life)", "your measure of y when x=0, i.e. where your graph crosses the y-axis","The estimates made by your model for each of your explanatory variables")
- 
-    Table_Glossary<-data.frame(Word,Explanation)
-
-    kbl(Table_Glossary) %>%
-      kable_styling("basic")
-    ```
 
 <img src="../Table2.jpeg" style="max-width:100%;" class="center">
 
