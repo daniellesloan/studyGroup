@@ -48,26 +48,6 @@ If these words make you nervous - fear not we will go through what it means.
 
 Data can come in many shapes and sizes. To know which model type to fit we need to know what type of data the **response variable** is. Here is a table of data types that you may encounter, some examples and what type of  model is appropriate:
 
-
-
-    ```{r Data_type,echo=FALSE, warning=FALSE}
-    library("knitr") #basic table maker
-    library("kableExtra")# fancy things happen with this
-    
-    
-    Data_types<-c("Continuous", "Count (Discrete)", "Proportions (Binomial)", "Bernoulli (Binomial)") # I am creating a vector with what I am trying to say, each bit will later be treated as a row
-    Rule_of_thumb<- c("You can measure it on a continous scale", "You can count it (i.e. you can distinguish individuals,     situations etc.)", "Counts of within a limited number", "You can categorize into two or more distinct categories")
-    Examples<- c("Height, Weight, Pressure, Length, Density etc.","Birds seen, plants in an area, times you have broken your  bones, ","Proportion of population infected vs non-infected, Proportion of round vs. edgy pebbles, etc.", "Coin toss, Dead     or alive, votes between two candiates, Yes/No")
-    Models_types<-c("General linear model LM) X","Generalised linear model (GLM)","Generalised linear model (GLM)","Generalised linear model (GLM)")
-
-    Table_types<-data.frame(Data_types,Rule_of_thumb,Examples,Models_types) # I am creating a dataframe (like a table in R, which puts all the different vectors together stacking them one next to the other) make sure that you have the same number of rows in each vector otherwise it doesn work
-    colnames(Table_types)<-c("Data types","Rule of thumb", "Examples", "Appropriate model") # calls my colums something more fancy 
-    kbl(Table_types) %>% #prints very basic table
-      kable_styling("striped") %>% # makes it into a fancy style
-      row_spec(1,background="skyblue") #you can manipulate your row with this
-    
-    ```
-
 <img src="../Table1.jpeg" style="max-width:100%;" class="center"> 
 
 
