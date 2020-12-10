@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Linear modelling in R
+title: Introduction to Linear modelling in R 2020
 author: Laura Mackenzie
 visible: true
 tags:
