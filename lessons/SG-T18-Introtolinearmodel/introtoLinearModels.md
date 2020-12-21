@@ -93,7 +93,7 @@ If our variables are correlated and we fit them in the same model this can lead 
 For anyone who wants to have a whole video on the assumptions of linear models/regressions have a look [here](https://www.youtube.com/watch?v=0MFpOQRY0rw)
 
 ## The fun bit
-Now I have talked enough about assumptions and model types, we will play with some data. To follow this workthrough, download the data linked to this tutorial and upload it to your R session.  
+Now I have talked enough about assumptions and model types, we will play with some data. To follow this workthrough, download the data linked [here](https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T18-Introtolinearmodel/Hangryness_trial.csv) and upload it to your R session.  
 
     ```{r, Load data}
     Data<-read.csv("Hangryness_trial.csv")
