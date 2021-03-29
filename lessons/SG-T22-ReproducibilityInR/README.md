@@ -9,6 +9,9 @@ Anyone who currently uses, or wants to learn about, reproducibility in R.
 **When and where**
 Wednesday 31st March 2021, 16:00 - 18:00
 
+### Files 
+Any files will be added here. 
+
 This session is open to everyone, so please share it with anyone who might be interested.
 
 Hope you see you there!
