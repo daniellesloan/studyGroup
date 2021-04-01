@@ -10,7 +10,7 @@ Anyone who wants to learn about social network analysis.
 **SNA Tutorial.Rmd** 
 *An R markdown version of the tutorial.*
 
-**SNA-tutorial.htlm**
+**SNA-tutorial.html**
 *A HTML version of the tutorial.*
 
 **cricket_network_data.RData**
