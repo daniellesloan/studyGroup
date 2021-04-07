@@ -12,7 +12,7 @@ Anyone who wants to learn about social network analysis.
 
 **SNA-tutorial.html**
 *A HTML version of the tutorial.*
-` [<Click here>] (<http://htmlpreview.github.com/?https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T21-SocialNetworkAnalysis/SNA-tutorial.html>)`
+[Click here](http://htmlpreview.github.com/?https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T21-SocialNetworkAnalysis/SNA-tutorial.html)
 
 **cricket_network_data.RData**
 *This is the data you will need for this tutorial.* 
