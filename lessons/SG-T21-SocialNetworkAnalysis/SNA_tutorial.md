@@ -257,7 +257,7 @@ gplot(mfnetwork, gmode="graph",
 ![image](https://user-images.githubusercontent.com/56924820/114065844-0071bb00-9893-11eb-81b1-081cad36114b.png)
 
 
-```{r, echo = F}
+```
 palette(colorRampPalette(c("aliceblue", "darkblue"))(10))
 gplot(mmnetwork, gmode="graph", 
       vertex.cex= (mfnetwork %v% "mass")^2, 
