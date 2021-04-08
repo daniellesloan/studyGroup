@@ -9,7 +9,7 @@ tags:
   # languages
   - R
   # levels
-  - beginner
+  - intermediate
 ---
  - **Author**: [David Fisher](https://www.abdn.ac.uk/people/david.fisher/)
  
@@ -615,8 +615,11 @@ None of the individual p-values for the Geweke convergence diagnostic test are s
 Really cool. Check out:
 
 > [Silk et al. 2018](https://www.cell.com/trends/ecology-evolution/fulltext/S0169-5347(18)30062-4)
+
 > [Finn et al. 2019](https://www.sciencedirect.com/science/article/pii/S0003347218304020)
+
 > [Finn 2021](https://academic.oup.com/cz/article/67/1/81/6081014)
+
 > [Hasenjager, Silk, Fisher 2021](https://academic.oup.com/cz/article/67/1/45/6124358)
 
 
