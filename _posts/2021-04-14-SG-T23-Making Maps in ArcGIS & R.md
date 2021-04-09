@@ -4,6 +4,6 @@ text: An interactive workshop with Lucy Henshall & Ieuan Jones on how to create 
 location: MS Teams.
 link: https://github.com/AberdeenStudyGroup/studyGroup/issues/64
 date: 2021-04-14
-startTime: '16:00pm'
-endTime: '18:00pm'
+startTime: '16:00'
+endTime: '18:00'
 ---
