@@ -7,8 +7,19 @@ Lucy Henshall & Ieuan Jones will be leading this workshop focusing on how to cre
 
 "Why use R for making maps" - Ieuan Jones
 
+**Language & programmes:**
+ArcGIS 
+R 
+R Studio
+
 **Who is it for:**
 Suitable for anyone interested in using maps as part of their research.
+
+**What you need:** 
+
+Access to R. Available at: [The  Project for Statistical Computing](https://www.r-project.org/)
+
+Access to ArcGIS. Available at: [University of Aberdeen Software centre](https://www.abdn.ac.uk/it/student/pcs/sds.php)
 
 ### Files
 **.....Rmd** 
@@ -17,5 +28,16 @@ Suitable for anyone interested in using maps as part of their research.
 **....html**
 *A HTML version of the tutorial.*
 
-**...**
+**...data**
 *This is the data you will need for this tutorial.* 
+
+
+### Tutorial Presentation Slides
+
+**Slides are available [here](....)**
+
+---
+
+You can access all of the above links through the [Aberdeen Study Group](https://aberdeenstudygroup.github.io/studyGroup/lessons/) page  as well!
+
+---
