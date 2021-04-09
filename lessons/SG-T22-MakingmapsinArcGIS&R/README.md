@@ -1,6 +1,7 @@
 ### Making maps in ArcGIS and R ###
 
 **What it's about**
+
 Lucy Henshall & Ieuan Jones will be leading this workshop focusing on how to create maps in ArcGIS and R.
 
 "So you want to make a map of your study site?" - Lucy Henshall
