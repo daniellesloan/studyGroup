@@ -22,16 +22,20 @@ Access to R. Available at: [The  Project for Statistical Computing](https://www.
 
 Access to ArcGIS. Available at: [University of Aberdeen Software centre](https://www.abdn.ac.uk/it/student/pcs/sds.php)
 
+
 ### Files
-**.....Rmd** 
-*An R markdown version of the tutorial.*
+
+**.....Rmd**
+
+*An R markdown version of the Maps in R tutorial.*
 
 **....html**
+
 *A HTML version of the tutorial.*
 
-**...data**
-*This is the data you will need for this tutorial.* 
+**Data**
 
+*This is the [data](https://drive.google.com/drive/folders/1pr2hZkJIjKTlzaap9uq0lw3dKH41VK8L?usp=sharing) you will need for this tutorial.* 
 
 ### Tutorial Presentation Slides
 
