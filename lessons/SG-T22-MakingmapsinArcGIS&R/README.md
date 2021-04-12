@@ -25,17 +25,19 @@ Access to ArcGIS. Available at: [University of Aberdeen Software centre](https:/
 
 ### Files
 
-**.....Rmd**
-
-*An R markdown version of the Maps in R tutorial.*
-
-**....html**
-
-*A HTML version of the tutorial.*
 
 **Data**
 
-*This is the [data](https://drive.google.com/drive/folders/1pr2hZkJIjKTlzaap9uq0lw3dKH41VK8L?usp=sharing) you will need for this tutorial.* 
+*This is the [data](https://drive.google.com/drive/folders/1pr2hZkJIjKTlzaap9uq0lw3dKH41VK8L?usp=sharing) you will need for the ArcGIS section of this tutorial.* 
+
+**.....Rmd**
+
+*An R markdown version of the "Why use R for making maps" tutorial.*
+
+**....html**
+
+*A HTML version of this tutorial.*
+
 
 ### Tutorial Presentation Slides
 
