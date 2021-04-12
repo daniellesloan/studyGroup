@@ -30,7 +30,7 @@ Access to ArcGIS. Available at: [University of Aberdeen Software centre](https:/
 
 *This is the [data](https://drive.google.com/drive/folders/1pr2hZkJIjKTlzaap9uq0lw3dKH41VK8L?usp=sharing) you will need for the ArcGIS section of this tutorial.* 
 
-**.....Rmd**
+**gis_abdn_sg.Rmd**
 
 *An R markdown version of the "Why use R for making maps" tutorial.*
 
