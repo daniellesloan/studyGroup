@@ -1,0 +1,253 @@
+---
+title: "GIS in R- Abdn Study Group"
+author: "Ieuan Jones"
+date: "06/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting Started
+
+First we need to load the packages that we might need for making maps in R.
+
+```{r, message=FALSE, warning=FALSE}
+library(sf) #working with sf objects in R
+library(tidyverse)
+library(viridis) #colour blind friendly colour palettes and in grey scale printing
+library(raster) #working with rasters in R
+library(maps) #basic country maps
+library(mapdata) #higher resolution maps
+library(readr)
+library(marmap)
+```
+
+## Reading spatial data into R
+
+Now we want to read some data into R that we can use. 
+
+```{r}
+minke <- read_csv("ftp://ftp.hafro.is/pub/data/csv/minke.csv")
+glimpse(minke)
+```
+
+Download some basemap data. I tried some packages but it wasn't working for me so you can get world map data here: https://www.naturalearthdata.com/downloads/ 
+You get a choice of scales, I use the large scale data because if you're not working at the world scale, the countries look pretty bad in the other 2. 
+
+```{r}
+world <- st_read("C:/Users/Ieuan/Documents/Coronavirus_Homeworking/ne_50m_land/ne_10m_land")
+
+iceland <- st_crop(world, xmin = -25, xmax = -10, ymin = 63, ymax = 68)
+```
+
+Let's say we want to plot the minke whale data but with separate colours for their sex. We want to use geom_polygon for plotting the base map and geom_point for plotting the whale data.
+
+```{r}
+ggplot()+
+  geom_sf(data = iceland, size = 0.6, color = "black", fill= "snow4")+
+  geom_point(data = minke, aes(lon, lat, colour = sex))+
+  coord_sf()
+```
+
+We might want to produce this map without the x and y axis markers or labels.
+
+```{r}
+m <- ggplot()+
+  geom_sf(data = iceland, size = 0.6, color = "black", fill= "snow4")+
+  geom_point(data = minke, aes(lon, lat, colour = sex))+
+  coord_sf()+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+m
+```
+
+We may also want to vary the kind of points we are plotting on the map. For example, we may want to plot the start and end points of fishing tows, or we may want to show the abundance of of something by the sampling location.
+We can use geom_segment to plot something with only a start and end point, but first we need to bring in some different data.
+
+```{r}
+smb <- read_csv("ftp://ftp.hafro.is/pub/data/csv/is_smb.csv") 
+smb2019 <- filter(smb, year == 2019)
+glimpse(smb2019)
+
+m <- 
+  ggplot()+
+  geom_sf(data = iceland, size = 0.6, color = "black", fill= "snow4")+
+  coord_sf()+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+m + geom_segment(data = smb2019, aes(x = lon1, y = lat1, xend = lon2, yend = lat2))
+```
+
+Plotting cod abundance in the the Icelandic fish survey using geom_point. Alpha is the transparency of the bubble since we likely don't want completely opaque bubbles as they overlap.
+
+```{r}
+cod <- m + geom_point(data = smb2019, 
+                      aes(lon1, lat1, size = cod_n), 
+                      alpha = 0.2, 
+                      colour = "red")
+cod
+```
+
+We can also make the bubbles bigger.
+
+```{r}
+cod + scale_size_area(max_size = 20)
+```
+
+Personally, I prefer to present data like that in the form of a raster. There are a few different tools for this but one shortcut is to use geom_tile. In the fish data we have ICES rectangles with central coordinate position (ir_lon and ir_lat). So we can summarise the data by these rectangles and then plot them.
+
+```{r}
+s <- smb2019 %>% 
+  group_by(ir_lon, ir_lat) %>% 
+  summarise(Cod = mean(cod_n))
+
+tile <- ggplot() +
+  geom_sf(data = iceland, size = 0.6, color = "black", fill= "snow4")+
+  coord_sf() +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
+  geom_tile(data = s, aes(x = ir_lon, y = ir_lat, fill = Cod))+
+  scale_fill_viridis_c(option = "B", direction = -1)
+tile
+```
+
+However creating a raster object may be more informative. We will look at creating a raster in bit but firstly we'll just use rasters from the package marmap that give bathymetry data. 
+
+```{r}
+xlim <- c(-28, -10)
+ylim <- c(62.5, 67.5)
+
+depth <- 
+  getNOAA.bathy(lon1 = xlim[1], lon2 = xlim[2],
+                lat1 = ylim[1], lat2 = ylim[2],
+                resolution = 1) %>% 
+  fortify() %>%  # turn the object into a data.frame
+  filter(z <= 0)
+```
+
+```{r}
+m + geom_raster(data = depth, aes(x = x, y = y, fill = z)) +
+  coord_sf() +
+  labs(fill = "Depth [m]")
+```
+
+There is also a shortcut for turning raster data into contours with geom_contour 
+
+```{r}
+m2 <- m + geom_contour(data = depth, aes(x, y, z = z),
+                       breaks = c(-25, -50, -100, -200, -400),
+                       lwd = 0.1)
+m2
+```
+
+We can add our minke whale data to this as well
+
+```{r}
+m2 + geom_point(data = minke, aes(lon, lat), colour = "red")
+```
+
+We may want to create a facet plot to show maps over time. There are different ways that this can be done but facet_wrap is an easy one. 
+We can use our fish survey data from earlier and select out 6 years in 5 year intervals.
+
+```{r}
+smb2 <- filter(smb, year %in% c(1995, 2000, 2005, 2010, 2015, 2019))
+
+p <- m + geom_point(data = smb2, aes(lon1, lat1, size = haddock_kg), 
+                    alpha = 0.15, 
+                    colour = "red")+
+  scale_size_area(max_size = 15)
+
+p + facet_wrap(~ year)
+```
+
+You can also use facet_grid with the two arguments you want to have in the grid(eg. facet_grid(age~abundance))
+
+```{r}
+rbya <- read_csv("ftp://ftp.hafro.is/pub/data/csv/is_smb_cod_rbya.csv")
+rbya <- filter(rbya, yc %in% c(1984, 1985, 1996, 1997))
+glimpse(rbya)
+
+m + geom_point(data = rbya,
+             aes(lon1, lat1, size = n),
+             alpha = 0.2,
+             colour = "red") +
+  scale_size_area(max_size = 10) +
+  facet_grid(age ~ yc) +
+  labs(title = "Abundance of cod", 
+       subtitle = "By yearclass and age",
+       size = "per 4 miles")
+```
+
+Lastly, we can use geom_path to plot tracking data where we have a dataset which is ordered by time. There are also tools within dplyr that can be used to filter out pings in tracking data with less accuracy than is desired. 
+
+```{r}
+track <- read_csv("ftp://ftp.hafro.is/pub/data/csv/is_smb_vms2019.csv")
+
+m + geom_path(data = track, aes(x = lon, y = lat, colour = vessel))
+```
+
+Creating a raster object within R
+
+Sometimes we might want to create raster from our data within R for us to plot. This enables us to send the raster element of the map without sending over the whole dataset for people to work on amongst other things. 
+We can try this as an easier to read representation of our cod abundance data from earlier. We have to create a target raster object with the correct resolution we want our raster to contain. 
+
+```{r}
+target <- raster(xmn = -26, xmx = -9, ymn = 62, ymx = 69,
+                  res = c(1,0.5), crs = CRS("+proj=longlat +datum=WGS84"))
+
+glimpse(smb2019)
+
+smb2019 <- smb2019 %>% st_as_sf(coords = c("ir_lon", "ir_lat"), crs = 4326)
+smb2019rs <- rasterize(smb2019, target, field = "cod_n", fun = mean)
+
+smb2019rs <- as.data.frame(smb2019rs, xy=TRUE)
+
+ggplot()+
+  geom_raster(data = smb2019rs, aes(x = x, y = y, fill = layer))+
+  scale_fill_viridis_c(na.value="white")+
+  geom_sf(data = iceland, size = 0.6, color = "black", fill= "snow4")+
+  coord_sf()+
+  theme_bw()+
+  ggtitle("Cod Abundance 2019")+
+  ylab("")+
+  xlab("")+
+  labs(fill = "Cod Abundance")
+
+```
+
+Here's some of the maps I use to illustrate fish biodiversity around the North Sea
+
+```{r}
+coast <- st_read("C:/Users/Ieuan/Documents/Coronavirus_Homeworking/ne_50m_land/ne_10m_land")
+coast_crop <- st_crop(coast, xmin = -7, xmax = 15, ymin = 48, ymax = 62.5)
+
+sr_all1rs_spatpred <- raster("C:/Users/Ieuan/Documents/Coronavirus_Homeworking/DATRAS_R/DATRAS_rst/sr_all1rs_spatpred.tif")
+sr_all1rs_spatpred <- as.data.frame(sr_all1rs_spatpred, xy=TRUE)
+
+ggplot()+
+  geom_raster(data = sr_all1rs_spatpred, aes(x = x, y = y, fill = sr_all1rs_spatpred))+
+  scale_fill_viridis_c(option="magma", na.value="white")+
+  geom_sf(data = coast_crop, size = 0.6, color = "black", fill= "snow4")+
+  coord_sf()+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  ggtitle("Fish Biodiversity IBTS")+
+  ylab("")+
+  xlab("")+
+  labs(fill = "R")
+
+ggplot()+
+  geom_raster(data = sr_all1rs_spatpred, aes(x = x, y = y, fill = sr_all1rs_spatpred))+
+  scale_fill_viridis_c(na.value="white")+
+  geom_sf(data = coast_crop, size = 0.6, color = "black", fill= "snow4")+
+  coord_sf()+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  ggtitle("Fish Biodiversity IBTS")+
+  ylab("")+
+  xlab("")+
+  labs(fill = "R")
+```
