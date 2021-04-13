@@ -34,7 +34,9 @@ Access to ArcGIS. Available at: [University of Aberdeen Software centre](https:/
 
 ### Tutorial Presentation Slides
 
-**Slides are available [here](....)**
+**Slides For Lucy's workshop are available [here](....)**
+
+**Slides For Ieuan's workshop are available [here](https://drive.google.com/file/d/1K2UMDmAEGzsJ5zAe4BhhtcFnj-uVbGSy/view?usp=sharing)**
 
 ---
 
