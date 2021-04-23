@@ -12,7 +12,7 @@ R
 Anyone who wants to learn about how existing data can be used as part of your research, and to find out more about meta analysis and text mining.
 
 **What you need**
-You don't need anything, but if you want to do Rosie's tutorial in your own time, you will need access to R. 
+You don't need anything, but if you want to do Rosie's tutorial in your own time (or during the session if you prefer), you will need access to R. 
 Available at: [The Project for Statistical Computing](https://www.r-project.org/)
 
 ### Files 
