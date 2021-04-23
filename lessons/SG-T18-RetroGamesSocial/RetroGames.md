@@ -15,7 +15,7 @@ tags:
 This was hosted as an online social event in November 2020, but we’ve uploaded the [code](https://github.com/AberdeenStudyGroup/studyGroup/tree/gh-pages/lessons/SG-T18-RetroGamesSocial) to share the `fun`. 
 The aim was simple: have a go at playing some `R`etro games. 
 
- <img src="../RGames_event.jpg" style="max-width:100%;" class="center"> 
+<img src="./Arcade%20gamepast%20event.jpg" style="max-width:100%;", class = "center"> 
  
 **Requirements**
 
