@@ -17,5 +17,5 @@ An introductory session to two types of analysis you can do using existing data.
 ## Aimed at: 
 Anyone interested in learning more about text analysis and/or meta analysis. 
 
-## All files##
+## All files
 To be uploaded. 
