@@ -16,6 +16,8 @@ You don't need anything, but if you want to do Rosie's tutorial in your own time
 Available at: [The Project for Statistical Computing](https://www.r-project.org/)
 
 ### Files 
-BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. 
-AllBearTopics.jpeg is an image showing all topics from our topic model. 
-BearModel.jpeg is a plot showing the words that contribute the most to each topic. 
+<ul>
+  <li>BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. </li>
+  <li>AllBearTopics.jpeg is an image showing all topics from our topic model. </li>
+  <li>BearModel.jpeg is a plot showing the words that contribute the most to each topic. </li>
+</ul>
