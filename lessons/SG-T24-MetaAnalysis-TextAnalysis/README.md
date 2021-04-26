@@ -17,3 +17,4 @@ Available at: [The Project for Statistical Computing](https://www.r-project.org/
 
 ### Files 
 BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. 
+AllBearTopics.jpeg is an image showing all topics from our topic model. 
