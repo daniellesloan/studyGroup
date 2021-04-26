@@ -1,0 +1,300 @@
+---
+title: "Tweet text analysis tutorial for Aberdeen Study Group"
+author: "Rosie Baillie"
+date: "14/04/2021"
+output: 
+  html_document: 
+    toc: true
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# An introduction to using social media for text mining 
+Social media and online content can be a useful way of identifying how people feel and discuss a certain topic, which can be the focus of a research project, or a smaller piece of the picture.  
+
+For this tutorial we'll be looking at some of the basic things we can do with tweets in relation to our search topic. For this tutorial, we're interested in looking at how people tweet about bears. I've included data which you can download from the [Aberdeen Study Group GitHub page](https://github.com/AberdeenStudyGroup/studyGroup/tree/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis) but if you want to connect to the Twitter API yourself, there are instructions on how to do that also. 
+
+# Connecting to the Twitter API
+If you want to connect to Twitter's API and collect you own data you will need to join [Twitter's Academic Research track](https://developer.twitter.com/en/solutions/academic-research). It's pretty straightforward and my application was approved within 48 hours. If you don't want to, skip down to where you can load in the data I've provided, or you could load in any text data you might have.  
+
+When your application is approved, go ahead and set up your "application" by giving it a name. You will then be shown your API keys and secrets, which is what you'll need to connect to the API via R.  
+
+The method I take you through below is not full access to Twitter's API. This method only gives us a selection of tweets, not every single tweet matching our search criteria. Access to the full API is more complex than what we're doing today, but there's some info on [Twitter's website](https://developer.twitter.com/en/solutions/academic-research/resources) if you want to learn more.
+
+```{r, connecting to API, echo=FALSE, warning = FALSE}
+library(rtweet)
+
+appname <- "WildlifeTourism"
+
+key <- "VBaetGQgPeNDtrT9tE607De1s"
+
+secret <- "Mg483ZYsMBzkbq7Kjh744aNNFYb8iBcn82LO6zFe06L1k9rs6C"
+
+twitter_token <- create_token(
+  app = appname,
+  consumer_key = key,
+  consumer_secret = secret,
+  access_token = "1080508782-UozWC7jPDU33O1eBh9rdGmPa0DKChw8srpsMoIA",
+  access_secret = "ArTBrXlTnBKTJ9UY87AI8cdhOL413jXlV3TqtvODPMx0a")
+
+
+```
+
+To connect to the API, paste in your app name, keys and secrets below. 
+```{r, your API connection, eval = FALSE}
+appname <- "Your app name"
+
+key <- "Your key"
+
+secret <- "Your secret"
+
+twitter_token <- create_token(
+  app = appname,
+  consumer_key = key,
+  consumer_secret = secret,
+  access_token = "Your access token",
+  access_secret = "Your access secret)
+
+```
+
+Now that we've connected to the API, let's get searching. As I mentioned above, this won't give every single tweet relating to your search term but it's a perfectly good starting place. 
+```{r, searching, warning = FALSE, message = FALSE, eval = FALSE}
+# Library
+library(tidyverse)
+library(tidytext)
+
+Bears <- search_tweets(
+  "bear", n = 5000, lang = "en", include_rts = FALSE
+)
+
+# Since I'm supplying this data to you for this tutorial, I removed any information that could identify people, such as account names, and I'm adding in a random id for each tweet. 
+
+Bears <- Bears %>% 
+  select(text, source, favorite_count, retweet_count)
+
+library(ids)
+
+RandID <- random_id(5000, bytes = 3)
+
+Bears$ID <- RandID
+
+save(Bears, file = "BearTweets.Rdata")
+```
+
+# Load in the data 
+If you're just loading in the data I've supplied start here.  
+```{r, loading data}
+load("BearTweets.Rdata")
+```
+
+# Text cleaning  
+The very first thing we need to do is check for duplicates because the package we'll be using for topic modelling has issues with duplicates. Unfortunately, we do have some and that's likely a result of bot tweets. There is a discussion to be had here about removing duplicates because sometimes websites will suggest a tweet for sharing an article, or a fundraising page, so it might not always be from bots. You might not always want to remove your duplicates - and you don't have to. We'll go into more detail about that later but if you want to remove your duplicates, run the code below, or skip this section if you don't. 
+```{r, remove dupes}
+length(unique(duplicated(Bears$text)))
+
+Bears <- Bears[!duplicated(Bears$text), ]
+
+```
+
+The next step is text cleaning; this is where we'll remove things that aren't really part of speech, such as "https" which would show up in a tweet if there was a link attached, and take care of some more tweets from bots. 
+
+Take a look through the text column - can you see anything you might want to remove? I can see a lot of tweets that are clearly from bots and I'm not interested in those, so I definitely want to get rid of those. The majority of the bot tweets look to have "Cheap Bots, Done Quick!" listed as their source, so that's an easy way to get rid of those. 
+
+```{r, remove bots, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(tidytext)
+
+CleanBear <- Bears %>% 
+  filter(source != "Cheap Bots, Done Quick!")
+```
+
+
+Next, we're going to remove "stop words". These are words such as "a" or "the", which don't really tell us much about the discussion around bears, or whatever our search term is. 
+
+```{r, clean text}
+data(stop_words)
+
+CleanBear <- Bears %>%
+   unnest_tokens(word, text) %>% 
+   anti_join(stop_words, by=c("word"="word")) 
+
+```
+Now we've split our text up by word we can take a look at the most popular words and we might identify some more words we need to remove. 
+```{r, popular words, warning = FALSE, message = FALSE}
+library(kableExtra)
+
+CleanBear %>%
+  count(word, sort = TRUE) %>%
+  kable(align = "c")%>%
+  kable_styling(bootstrap_options ="striped") %>%
+  row_spec(0, background = "white", align = "c")%>%
+  add_header_above(c("Most common words in our tweets"= 2), bold = TRUE)  %>%
+  scroll_box(width = "500px", height = "400px") 
+
+```
+We can see some words which relate to links, such as "https", "t.co". and "amp".
+``` {r, removing words}
+CleanBear <- CleanBear %>% 
+  anti_join(stop_words, by = c("word" = "word")) %>% 
+  filter(word != "t.co") %>% 
+  filter(word != "https") %>% 
+  filter(word != "amp")
+
+```
+
+# Positive vs Negative
+I always find it really interesting to look at the positive and negative words being used in the discussion around our search term.    
+
+When we're doing text analysis, we rely on dictionaries which are essentially a list of words with a score next to them. The way they're scored varies by dictionary, for example the Bing dictionary is just "positive" or "negative. Other dictionaries have a numerical value, and some may look at different kind of emotions.  
+
+**Warning: spicy language coming up**  
+```{r, sentiment, warning = FALSE, message = FALSE}
+library(wordcloud)
+library(reshape2)
+
+PosVsNeg <- CleanBear %>% 
+  inner_join(get_sentiments("bing")) %>% 
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(max.words = 100, scale=c(3.5,0.50))
+
+```
+  A couple of days before I grabbed this data, a guide was injured and died following an incident with a grizzly bear in Yellowstone National Park, so we can see some words on the negative side of the plot which relate to that. We also see the word 'wild' showing up on the negative side and it raises an interesting point about sentiment dictionaries.    
+
+A sentiment dictionary is coded by people, who decide if a word is positive or negative. In this dictionary 'wild' has been classed as a negative word and maybe it is in some instance, but when we're looking at wild animals, it's not. I don't plan on using the Bing dictionary further in this analysis but we will recode another dictionary later on where "wild" once again appears as a negative word.  
+
+On the positive side we can see some words that make sense, such as "love", "protect", and "cute". We can see words that we might not associate with the animal bears on both sides, which tells us that people are not just using the word 'bear' to talk about the animals.   
+
+# Emotions in grizzly bear tweets  
+As well as looking at positive or negative words, we can use the NRC dictionary to look at which emotions are associated with tweets about bears.  
+```{r, bear emotions, fig.width = 10, warning = FALSE, message = FALSE}
+library(syuzhet)
+
+NRCDics <- get_sentiments("nrc")
+
+EmoBear <- CleanBear %>%
+    inner_join(NRCDics) %>% 
+    count(word, sentiment, sort = TRUE)
+
+ggplot(EmoBear, aes(sentiment, n)) +
+  geom_bar(aes(fill = sentiment), stat = "identity", show.legend = FALSE) +
+  labs(x = "Emotion & sentiment", y = "Scores", title = "Emotion in 'bear' tweets")
+```
+Fear is by far the most dominating emotion in our tweets. It's not a huge surprise because bears are a polarising species, especially when there's been a human-wildlife conflict incident in the news recently. Anger is also showing up as a common emotion. It's not all bad news, though some tweets are positive or are associated with trust. Let's dive a little deeper into the fear emotion.    
+
+``` {r, looking at fear, warning = FALSE, message = FALSE}
+NRCFear <- get_sentiments("nrc") %>% 
+  filter(sentiment == "fear")
+
+FearWords <- CleanBear %>%
+    inner_join(NRCFear) %>%
+    count(word, sort = TRUE)
+
+FearWords %>% 
+  kable(align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "condensed","responsive", "bordered")) %>%
+  row_spec(0, color = "white", align = "c")%>%
+  add_header_above(c("Words associated with fear in tweets about bears"= 2), bold = TRUE)  %>% 
+  scroll_box(width = "500px", height = "400px") 
+
+```
+The word "bear" itself is showing up as a word categorised as fear, which probably explains why 'fear' is the biggest emotion seen in our tweets. Let's take a look at recoding the dictionary.  
+
+There are a couple of options here. Since it's our search term and it's a species which people feel very differently about, let's just remove it from the dictionary. That will show us what the rest of the words in our tweets are about.    
+
+```{r, recode, warning = FALSE, message = FALSE}
+# The first thing to do is view your dictionary to look at how it's coded; is it a word, or numbers? 
+
+Dictionary <- get_sentiment_dictionary(dictionary = "nrc", language = "english")
+
+Dictionary <- Dictionary %>% 
+  filter(word != "bear")
+
+EmoBear2 <- CleanBear %>%
+    inner_join(Dictionary) %>% 
+    count(word, sentiment, sort = TRUE)
+
+ggplot(EmoBear2, aes(sentiment, n)) +
+  geom_bar(aes(fill = sentiment), stat = "identity", show.legend = FALSE) +
+  labs(x = "Emotion & sentiment", y = "Scores", title = "Emotion in 'bear' tweets")
+
+```
+  
+  We can see a huge change in how big the 'fear' bar was, which suggests the word 'bear' itself was making a large contribution to that emotion. Positive is now the most commonly seen emotion, followed by negative, trust, and anticipation.  
+
+# Topic modelling 
+Topic modelling allows us to find out how people are talking about our search term, by grouping similar things into topics. 
+
+How do we find out how many different topics there are? To run our topic model we'll be using a package called 'stm' and the function within that package called stm(). Part of that function is an argument where you specify "K =", which defines how many topics you think there are. If you set K = 0, stm will decide how many different topics there are for you. If you have duplicates in your text trying to run the function with K = 0 will cause issues, which is really frustrating.  
+
+If you don't want to remove duplicates you will need to manually define topics. You can do this anyway if you want to, and Julia Silge has [a great tutorial](https://juliasilge.com/blog/evaluating-stm/) on manually identifying the right number of topics. However, if you have a larger dataset it can take a long time to run one stm, let alone multiple so be aware that the larger your dataset, the longer this will take to run. 
+
+We removed the duplicates for the sake of this being a tutorial and to save time.  
+
+The STM itself will take about 10 minutes to run and that's just with 5,000 tweets. I recently ran an stm which took a week to fit. 
+
+``` {r, topic modelling, fig.width = 10, fig.height = 8, warning = FALSE, message = FALSE, eval = FALSE}
+library(stm)
+
+Bear_DFM <- CleanBear %>% 
+  count(ID, word, sort = TRUE) %>% 
+  cast_dfm(ID, word, n) 
+  
+Bear_Topic <- stm(Bear_DFM, K = 0, init.type = "Spectral")
+
+summary(Bear_Topic)
+
+save(Bear_Topic, file = "Bear_Topic.Rdata")
+```
+
+stm has determined we have 79 different topics, so let's take a look at these. 
+```{r, reviewing stm, warning = FALSE, message = FALSE, fig.width = 15, fig.height = 20}
+library(stm)
+
+load("Bear_Topic.Rdata") # You don't need to load this in here - I'm doing it because it takes so long to run the topic models and re-doing that each time I updated my Markdown file was a paaaain. 
+
+plot(Bear_Topic)
+```
+
+```{r, plotting topic models, warning = FALSE, message = FALSE, fig.width = 15, fig.height = 20}
+Tidy_Model <- tidy(Bear_Topic)
+
+Tidy_Model %>%
+    group_by(topic) %>%
+    top_n(20, beta) %>%
+    ungroup() %>%
+    mutate(topic = paste0("Topic ", topic),
+           term = reorder_within(term, beta, topic)) %>%
+    ggplot(aes(term, beta, fill = as.factor(topic))) +
+    geom_col(alpha = 0.8, show.legend = FALSE) +
+    facet_wrap(~ topic, scales = "free_y",  ncol = 4) +
+    coord_flip() +
+    scale_x_reordered() +
+    labs(x = NULL, y = expression(beta),
+         title = "Words most likely to belong to each topic")
+
+ggsave("BearModel.jpeg", height = 120, width = 60, units = "cm")
+
+```
+We've got a wide variety of things and some of those words are clearly not related to the animal bears, suggesting that we would need to get creative with our text cleaning if we only wanted to look at tweets relating to the animal.  
+
+# What next? 
+If you want to learn more about text mining and topic modelling, here are a few resources that helped me.  
+<ul>
+      <li>[Topic modelling with R and tidy data principles](https://www.youtube.com/watch?v=evTuL-RcRpc&t=938s)</li>
+      <li>[Text mining with R](https://www.tidytextmining.com/)</li>
+      <li>[Data Visualization and Analysis of Taylor Swift’s Song Lyrics](https://www.promptcloud.com/blog/data-visualization-text-mining-taylor-swift-song-lyrics/)</li>
+      <li>[Analyzing documents with tf-idf](https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf#tf-idf-definition-and-background)</li>
+    </ul>  
+    
+Here are a few ideas for next steps:
+<ul>
+    <li>Monitor how sentiment changes with time.</li>
+    <li>Look at whether certain sentiments or emotions are associated with more favourites or retweets.</li>
+    <li>If you're interested in more than one search term (maybe you want to look at bears and wolves, for example) you can compare sentiment and emotions between the two.</li>
+    
