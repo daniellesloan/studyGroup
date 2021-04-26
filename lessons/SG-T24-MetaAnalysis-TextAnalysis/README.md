@@ -16,4 +16,4 @@ You don't need anything, but if you want to do Rosie's tutorial in your own time
 Available at: [The Project for Statistical Computing](https://www.r-project.org/)
 
 ### Files 
-To be uploaded.
+BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. 
