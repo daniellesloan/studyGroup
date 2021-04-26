@@ -20,8 +20,8 @@ Anyone interested in learning more about text analysis and/or meta analysis.
 ## All files
 <ul>
   <li><a href = "https://rpubs.com/RosieB/ASGTwitterTextTutorial">Link to a HTML version of the tutorial - might be easier to follow along than the Markdown file in R.</a></li>
-  <li>BearsTwitterAnalysis.Rmd is the R Markdown tutorial file.</li>
-  <li>BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. </li>
-  <li>AllBearTopics.jpeg is an image showing all topics from our topic model. </li>
-  <li>BearModel.jpeg is a plot showing the words that contribute the most to each topic. </li>
+  <li><a href = "https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis/BearsTwitterAnalysis.Rmd">BearsTwitterAnalysis.Rmd</a> is the R Markdown tutorial file.</li>
+  <li><a href = "https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis/BearTweets.Rdata">BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API.</a> </li>
+  <li><a href = "https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis/AllBearTopics.jpeg"AllBearTopics.jpeg is an image showing all topics from our topic model. </a></li>
+  <li><a href = "https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis/BearModel.jpeg">BearModel.jpeg is a plot showing the words that contribute the most to each topic. </a></li>
 </ul>
