@@ -18,7 +18,6 @@ Available at: [The Project for Statistical Computing](https://www.r-project.org/
 ### Files 
 <ul>
   <li><a href = "https://rpubs.com/RosieB/ASGTwitterTextTutorial">Link to a HTML version of the tutorial - might be easier to follow along than the Markdown file in R.</a></li>
-  <li>BearsTwitterAnalysis.Rmd is the R Markdown tutorial file.</li>
   <li>BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. </li>
   <li>AllBearTopics.jpeg is an image showing all topics from our topic model. </li>
   <li>BearModel.jpeg is a plot showing the words that contribute the most to each topic. </li>
