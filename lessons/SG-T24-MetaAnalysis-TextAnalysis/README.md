@@ -21,4 +21,5 @@ Available at: [The Project for Statistical Computing](https://www.r-project.org/
   <li>BearTweets.Rdata contains the data to download if you want to follow the tutorial without connecting to Twitter's API. </li>
   <li>AllBearTopics.jpeg is an image showing all topics from our topic model. </li>
   <li>BearModel.jpeg is a plot showing the words that contribute the most to each topic. </li>
+  <li><a href="https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T24-MetaAnalysis-TextAnalysis/How%20to%20undertake%20a%20literature%20search%20in%20Scopus.pptx">A bonus presentation Francesca sent us about doing a literature review in Scopus.</a></li>
 </ul>
