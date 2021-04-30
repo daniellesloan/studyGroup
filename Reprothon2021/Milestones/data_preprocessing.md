@@ -9,6 +9,10 @@ tags:
   - Milestones
 ---
 
+**Primary Author:** [Maria Kamouyiaros](http://github.com/kamouyiaraki/)
+
+**Additional help from:** [Rosie Baillie](https://github.com/RosieBaillie) and [Dr Thomas Cornulier](https://www.abdn.ac.uk/sbs/people/profiles/cornulier)
+
 ## Overview 
 
 All StackOverflow data was downloaded from their archive and is available [here](https://ia800107.us.archive.org/view_archive.php?archive=/27/items/stackexchange/stackoverflow.com-Posts.7z) and was downloaded on the 9th of February 2021. 
