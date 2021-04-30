@@ -76,7 +76,7 @@ sed -i '/PostTypeId="1"/!d' Posts.xml
 sed -i '/AcceptedAnswerId/!d' Posts.xml
 ```
 
-*Note: filtering out all other programming languages took approximately 6 minutes to run on a 12 core/24 thread computer - so depending what machine you are using, this may take a while.*
+*Note: filtering out all other programming languages took approximately 6 minutes to run using a 12 core/24 thread processor - so depending what machine you are using, this may take a while.*
 
 
 ### Add a xml header
