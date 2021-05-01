@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Contributor Covenant Code of Conduct"
+title: "Contributor Code of Conduct"
 output: html_document
 visible: true
 tags:
