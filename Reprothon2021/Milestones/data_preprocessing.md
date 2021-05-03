@@ -152,9 +152,6 @@ The main issue with this archive in particular is that the scheme is formatted w
 ```
 At this point you can export to a much more manageable tab delimited text file using: `write.table(xDF2, file= "Posts_reduced.txt", sep = "\t")`
 
-### Subsetting for the Hackathon
-
-
 
 
 
