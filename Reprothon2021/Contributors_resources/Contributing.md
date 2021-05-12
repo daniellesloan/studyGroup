@@ -9,27 +9,22 @@ tags:
   - Contributors
 ---
 
-The Reprothon is ASG’s very own hackathon! A hackathon is an event where lots of people come together to work on a coding or programming problem; in this case: what factors affect the reproducibility of R code. 
+Registration is now open for the Aberdeen Study Group Reprothon! The Reprothon officially starts on the 9th June 2021, 16:00 – 18:00 UK time. During those two hours, we will be hosting an event in Microsoft Teams where you can work alongside others and ask questions. Don’t worry if you can’t join during those hours, the Reprothon will be live until further notice so you can take part at a time that suits you. 
 
-To do this, participants will work through queries taken from [StackOverflow](https://stackoverflow.com/), checking whether or not the accepted answer still works. Each participant will input this into the master [spreadsheet](https://aberdeenstudygroup.github.io/Reprothon2021/sheet.html) along with details such as the package used. We will track our progress live, and after the closing date, the organisers will analyse this data and produce a blog with our findings.
+### How do I sign up?
+All you need to do to sign up for the Reprothon is to fill out our [event registration form](https://docs.google.com/forms/d/e/1FAIpQLScnZ58LT9lgCHWgHK0JFD-1CPEOyZPcWdCM3VBxDdnXDgQ_AA/viewform). You will then be sent a unique user identification code which you will need to use when submitting your results. 
 
+You should be aware that all contributions to the project will fall under the project's [license](https://github.com/AberdeenStudyGroup/Reprothon2021/blob/main/LICENSE) and can be reused, remixed and shared according to that license.
 
-### Your role as a `Contributor`
+### What will I do?
+The aim of the Reprothon is to understand the longevity and reproducibility of R code by going through queries from  [StackOverflow](https://stackoverflow.com/) to identify whether or not the accepted answer still works. You can find out more info about why we are doing this on the [main Reprothon page](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/).  
 
-Contributors are volunteers who offer their time and expertise to the hackathon project. All contributions are central to the project as they move work forward by leaps and bounds! 
+On the day, you will be allocated a set of queries taken from StackOverflow. Your job will be to go through those queries and check whether or not the accepted answer still works. Once you’ve done that, you will upload your results via a Google form. When you finish your first allocation of queries, you will be able to request more if you’d like to keep going. 
 
-As a contributor you might: 
+If you want to make your contribution to Reprothon more interactive, why not set up a team with your friends or colleagues? You will all still use your individual ID when submitting results but could set up a working space for you and your group to chat together as you work through your queries. If you don’t have a team but would like to join one, let us know by emailing aberdeenstudygroup@gmail.com and we’ll pair you with someone! 
 
-- add your own unique perspective to the project plans and ideas
-- help with the research 
-- create graphics an mock ups
-- contribute code 
-- contribute mock data for testing out code
+A detailed how-to guide will be published to take you through the process step-by-step. If you have any questions, we will be around to help you out in the Microsoft Teams channel or via social media. 
 
-You should be aware that all contributions to the project will fall under the project's [license](https://github.com/AberdeenStudyGroup/Reprothon2021/blob/main/LICENSE) and can be reused, remixed and shared according to that license. 
 
 ### Sharing your story
-
-Part of the “open” nature of the hackathon is connecting and sharing our work, processes and experiences. During the event, we encourage you to post updates– both in the MS Teams chat, and on social media.
-<br>
-You can follow the `#reprothon2021` and `#hackers2021` hashtags on Twitter to see what others are up to.
+Part of open science is connecting and sharing our work and experiences. We encourage you to post updates in the MS Teams chat and on social media. If you’re on Twitter, you can use and follow the `#Reprothon2021` and `#Hackers2021` hashtags to share your experience and see what others are up to.  
