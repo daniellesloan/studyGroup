@@ -12,12 +12,12 @@ tags:
 Registration is now open for the Aberdeen Study Group Reprothon! The Reprothon officially starts on the 9th June 2021, 16:00 – 18:00 UK time. During those two hours, we will be hosting an event in Microsoft Teams where you can work alongside others and ask questions. Don’t worry if you can’t join during those hours, the Reprothon will be live until further notice so you can take part at a time that suits you. 
 
 ### How do I sign up?
-All you need to do to sign up for the Reprothon is to fill out our[<span style="color: blue"> event registration form </span>](https://docs.google.com/forms/d/e/1FAIpQLScnZ58LT9lgCHWgHK0JFD-1CPEOyZPcWdCM3VBxDdnXDgQ_AA/viewform). You will then be sent a unique user identification code which you will need to use when submitting your results. 
+All you need to do to sign up for the Reprothon is to fill out our[<span style="color: blue"> event registration form</span>](https://docs.google.com/forms/d/e/1FAIpQLScnZ58LT9lgCHWgHK0JFD-1CPEOyZPcWdCM3VBxDdnXDgQ_AA/viewform). You will then be sent a unique user identification code which you will need to use when submitting your results. 
 
-You should be aware that all contributions to the project will fall under the project's [license](https://github.com/AberdeenStudyGroup/Reprothon2021/blob/main/LICENSE) and can be reused, remixed and shared according to that license.
+You should be aware that all contributions to the project will fall under the project's [<span style="color: blue">license</span>](https://github.com/AberdeenStudyGroup/Reprothon2021/blob/main/LICENSE) and can be reused, remixed and shared according to that license.
 
 ### What will I do?
-The aim of the Reprothon is to understand the longevity and reproducibility of R code by going through queries from  [StackOverflow](https://stackoverflow.com/) to identify whether or not the accepted answer still works. You can find out more info about why we are doing this on the [main Reprothon page](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/).  
+The aim of the Reprothon is to understand the longevity and reproducibility of R code by going through queries from  [<span style="color: blue">StackOverflow</span>](https://stackoverflow.com/) to identify whether or not the accepted answer still works. You can find out more info about why we are doing this on the [<span style="color: blue">main Reprothon page</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/).  
 
 On the day, you will be allocated a set of queries taken from StackOverflow. Your job will be to go through those queries and check whether or not the accepted answer still works. Once you’ve done that, you will upload your results via a Google form. When you finish your first allocation of queries, you will be able to request more if you’d like to keep going. 
 
