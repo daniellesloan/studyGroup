@@ -19,7 +19,7 @@ You should be aware that all contributions to the project will fall under the pr
 ### What will I do?
 The aim of the Reprothon is to understand the longevity and reproducibility of R code by going through queries from  [<span style="color: blue">StackOverflow</span>](https://stackoverflow.com/) to identify whether or not the accepted answer still works. You can find out more info about why we are doing this on the [<span style="color: blue">main Reprothon page</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/).  
 
-On the day, you will be allocated a set of queries taken from StackOverflow. Your job will be to go through those queries and check whether or not the accepted answer still works. Once you’ve done that, you will upload your results via a Google form. When you finish your first allocation of queries, you will be able to request more if you’d like to keep going. 
+When the Reprothon has started you will be allocated one query at a time via our website - the link will be published when the Reprothon begins. Your job will be to work through that query to find out whether or not the accepted answer still works. Once you've done that, you will upload your results via a Google Form, and you can move on to another query - you can do as many as you like! 
 
 If you want to make your contribution to Reprothon more interactive, why not set up a team with your friends or colleagues? You will all still use your individual ID when submitting results but could set up a working space for you and your group to chat together as you work through your queries. If you don’t have a team but would like to join one, let us know by emailing aberdeenstudygroup@gmail.com and we’ll pair you with someone! 
 
