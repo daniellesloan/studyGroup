@@ -18,25 +18,17 @@ tags:
 Hello fellow Hacker,
 
 this short guide shows you how to contribute to the Reprothon 2021.
-The aim of the Reprothon is to test whether the accepted answers to questions on StackOverflow are reproducible or not, and enter the result into a spreadsheet.
+The aim of the Reprothon is to test whether the accepted answers to questions on StackOverflow are reproducible or not.
 
 Check out the general data generating process below.
 
-
-## Data generating process
-
-**1. Obtain Question ID from "Question_ID_Generator" (name needed)**
-
-**2. Visit StackOverflow and try to reproduce in R**
-
-**3. Fill out Google Form "Reprothon2021_data_entry"**  
 
 <p align=left>
 <img src="../images/workflow.png" style="max-width:100%;">
 </p>
 <br>
 
-## 4 quick steps how you can contribute 
+## How to Contribute
 
 **1. Sign up for Reprothon event**  
 Sign up to the Reprothon by following this link: <https://docs.google.com/forms/d/e/1FAIpQLScnZ58LT9lgCHWgHK0JFD-1CPEOyZPcWdCM3VBxDdnXDgQ_AA/viewform>
@@ -68,7 +60,7 @@ If you use RStudio, your R Version should show up when you start RStudio.
 <img src="../images/R_version1.png" style="max-width:100%;">
 </p>
 <br>
-Otherwise use the R.Version function to check
+Otherwise use the R.Version function to check:
 
 > `R.Version()`
 
@@ -80,6 +72,8 @@ In case you have an earlier Version than 4, follow this link to update your R ve
 
 
 ## Check out tutorials  
-See this [tutorial](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/) for a basic data entry example
-See this [tutorial](Link) that deals with common problems arising when replicating StackOverflow questions. 
+
+See this [tutorial](<span style="color: blue">https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/></span>) for a basic data entry example
+
+See this [tutorial](style="color: blue">Link</span>) that deals with common problems arising when replicating StackOverflow questions. 
 
