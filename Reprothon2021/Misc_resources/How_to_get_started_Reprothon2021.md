@@ -70,7 +70,7 @@ In case you have an earlier Version than 4, follow this link to update your R ve
 
 ## Check out tutorials  
 
-See this [tutorial](<span style="color: blue">https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/></span>) for a basic data entry example
+See this [<span style="color: blue">tutorial</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/>) for a basic data entry example
 
-See this [tutorial](style="color: blue">Link</span>) that deals with common problems arising when replicating StackOverflow questions. 
+See this [<span style="color: blue">tutorial</span>](Link) that deals with common problems arising when replicating StackOverflow questions. 
 
