@@ -7,9 +7,6 @@ tags:
   - Resources
 ---
 
-
-# How to Get Started
-
 **Author**: Max Tschol 
 **Date**: 18 May 2021
 
