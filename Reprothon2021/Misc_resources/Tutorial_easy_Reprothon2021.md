@@ -23,7 +23,7 @@ here we provide an example of how the data collection for the Reprothon 2021 loo
 Here is a link at the Question_ID_Generator
 
 <p align=centre>
-<img src="../images/confused_cat1.jpg" style="max-width:50%;">
+<img src="../images/confused_cat1.jpg" style="max-width:100%;">
 </p>
 
 **2. Copy and paste the Question ID into the StackOverflow search bar and click enter**  
@@ -32,7 +32,7 @@ Here is a link to StackOverflow https://stackoverflow.com/
 
 
 <p align=centre>
-<img src="../images/stack_example2.png">
+<img src="../images/stack_example2.png" style="max-width:50%;">
 </p>
 
 ## Reproduce the accepted answer to the question
