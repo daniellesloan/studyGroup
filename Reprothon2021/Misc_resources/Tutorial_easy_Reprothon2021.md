@@ -1,5 +1,5 @@
 ---
-title: "Tutorial_easy"
+title: "How to get your question & test it."
 author: "Max Tschol"
 output:
   html_document:
