@@ -1,5 +1,5 @@
 ---
-title: "How to generate your question & test it"
+title: "How to Generate & Test Your Question"
 author: "Max Tschol"
 output:
   html_document:
