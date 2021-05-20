@@ -23,7 +23,7 @@ here we provide an example of how the data collection for the Reprothon 2021 loo
 Here is a link at the Question_ID_Generator
 
 <p align=centre>
-<img src="../images/confused_cat1.jpg">
+<img src="../images/confused_cat1.jpg" style="max-width:50%;">
 </p>
 
 **2. Copy and paste the Question ID into the StackOverflow search bar and click enter**  
@@ -37,13 +37,13 @@ Here is a link to StackOverflow https://stackoverflow.com/
 
 ## Reproduce the accepted answer to the question
 
-**3. Familiarize yourself with the question **  
+**3. Familiarize yourself with the question**  
 
 <p align=centre>
 <img src="../images/stack_example3.png">
 </p>
 
-**4. Look for the accepted answer **  
+**4. Look for the accepted answer**  
 
 The accepted answer shows a green tickmark and is usually the first answer after the question.
 
@@ -51,7 +51,7 @@ The accepted answer shows a green tickmark and is usually the first answer after
 <img src="../images/stack_example4.png">
 </p>
 
-**5. Open a new R or Rstudio session **  
+**5. Open a new R or Rstudio session**  
 
 Please always restart R before reproducing a question.
 
@@ -59,7 +59,7 @@ Please always restart R before reproducing a question.
 <img src="../images/open_r.png">
 </p>
 
-**6. Reproduce accepted answer **  
+**6. Reproduce accepted answer**  
 
 In this example it is straight forward to just copy and paste the accepted solution from StackOverflow into R.
 
@@ -128,7 +128,8 @@ Take on another question from the Question_ID_Generator and don't forget to relo
 <p align=centre>
 <img src="../images/submit2.png">
 </p>
-
+<br>
+</br>
 ## Common problems while reproducing  
 
 Reproducing code is sometimes not easy. Check out the next Tutorial about solutions to common problems when reproducing code on StackOverflow (link) .  
