@@ -40,7 +40,7 @@ Here is a link to StackOverflow https://stackoverflow.com/
 **3. Familiarize yourself with the question**  
 
 <p align=centre>
-<img src="../images/stack_example3.png" style="max-width:70%;">
+<img src="../images/stack_example3.png" style="max-width:100%;">
 </p>
 
 **4. Look for the accepted answer**  
