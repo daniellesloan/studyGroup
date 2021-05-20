@@ -20,8 +20,8 @@ The aim of the Reprothon is to test whether the accepted answers to questions on
 Check out the general data generating process below.
 
 
-<p align=left>
-<img src="../images/workflow.png" style="max-width:100%;">
+<p align=center>
+<img src="../images/workflow.png" style="max-width:150%;">
 </p>
 <br>
 
