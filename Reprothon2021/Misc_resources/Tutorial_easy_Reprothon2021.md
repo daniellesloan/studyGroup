@@ -1,5 +1,5 @@
 ---
-title: "How to get your question & test it."
+title: "How to generate your question & test it"
 author: "Max Tschol"
 output:
   html_document:
@@ -13,48 +13,42 @@ tags:
 
 Hello fellow Hacker,  
 
-here we provide an example of how the data collection for the Reprothon 2021 looks like. If you want some basic information how you can contribute, please see the [<span style="color: blue">"How To Get Started" guide.</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/How_to_get_started_Reprothon2021/)
+In this tutorial we provide an example of what the data collection for the 2021 Reprothon will look like. If you want to learn how you can contribute, please see the [<span style="color: blue">"How To Get Started" guide.</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/How_to_get_started_Reprothon2021/)
 
 
 ### Get a StackOverflow question
 
-**1. Click on the Question_ID_Generator to obtain a question**  
+**1. Click on the link below to obtain a question**  
 
-Here is a link at the Question_ID_Generator
+Here is a link to the [<span style="color: blue">Question Generator</span>](https://shiny.abdn.ac.uk/biostat/Reprothon/) which will take you to our ShinyApp. Press teh button "Get A New Sample" and this will generate a link to a StackOverflow question, please click this link!
 
 <p align=centre>
 <img src="../images/confused_cat1.jpg" style="max-width:100%;">
 </p>
 
-**2. Copy and paste the Question ID into the StackOverflow search bar and click enter**  
 
-Here is a link to StackOverflow: <https://stackoverflow.com/>
-
-
-<p align=centre>
-<img src="../images/stack_example2.png" style="max-width:100%;">
-</p>
-
-<br>
 ### Reproduce the accepted answer to the question
 
-**3. Familiarize yourself with the question**  
+**2. Familiarize yourself with the question**  
+
+Read through the question, comments, code and answers to make sure you understand what the question is asking. If there is anything unsual here you can look at our troubleshooting guide(link) and/or include it in the "comments" seciton of the data entry form.
+
 
 <p align=centre>
 <img src="../images/stack_example3.png" style="max-width:100%;">
 </p>
 <br>
 
-**4. Look for the accepted answer**  
+**3. Look for the accepted answer**  
 
-The accepted answer shows a green tickmark and is usually the first answer after the question.
+The accepted answer shows a green tickmark on the left and is usually the first answer after the question.
 
 <p align=centre>
 <img src="../images/stack_example4.png" style="max-width:100%;">
 </p>
 <br>
 
-**5. Open a new R or Rstudio session**  
+**4. Open a new R or Rstudio session**  
 
 Please always restart R before reproducing a question.
 
@@ -63,9 +57,9 @@ Please always restart R before reproducing a question.
 </p>
 <br>
 
-**6. Reproduce accepted answer**  
+**5. Reproduce accepted answer**  
 
-In this example it is straight forward to just copy and paste the accepted solution from StackOverflow into R.
+In this example, you can just copy and paste the accepted solution from StackOverflow into R. Press "crtl + A" to highlight all your code and press "enter" to run it.
 
 <p align=centre>
 <img src="../images/copy_paste_stack.png" style="max-width:100%;">
@@ -75,9 +69,11 @@ In this example it is straight forward to just copy and paste the accepted solut
 <img src="../images/copy_paste_stack_r.png" style="max-width:100%;">
 </p>
 <br>
-In this example, the code provided in the answer was missing the function to load the package used. Add the code to load the appropriate package with functions `require()` or `library()`.
 
-In other cases you might have to install new packages before you can proceed to reproduce the example.
+In this example, the code provided in the answer was missing the function to load the package used. Add the code required to load the appropriate package with functions `require()` or `library()`.
+
+In other cases you might have to install new packages before you can reproduce the example.
+
 <br>
 
 <p align=centre>
@@ -85,38 +81,28 @@ In other cases you might have to install new packages before you can proceed to 
 </p>
 <br>
 
-## Fill out the GoogleForm 
+## Filling out the data collection form 
 
-**7. Fill out the Form**  
+**6. The googleForm**  
 
-We should have sent you an email including a link to the GoogleForm, otherwise ask a fellow hacker for help.  
+Click this [<span style="color: blue">link</span>](https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform) to access the Data Entry form. 
 
-First fill in:  
-- your personal ReprothonID which you should have received via email.   
-- the QuestionID you obtained from the QuestionIDGenerator.  
-- copy and paste the URL link to the question on StackOverflow.  
-- the year the Question was posted, you can find this above the Username.  
-
-<p align=centre>
-<img src="../images/fill_gform1.png" style="max-width:100%;">
-</p>
-<br>
-
-Then, fill in:  
-
-- the R-library (package) used in the accepted answer. In case there are multiple libraries, separate library names by "#". If the accepted solution uses base R functions, add "base".  
-- click whether you passed or failed to reproduce the question with the accepted solution provided. If you are unsure whether you reproduced the accepted solution correctly click Unknown.  
-- write the name of the R-library (package) that caused the error, if no error write "NA".  
-- write the function that caused the error, if no error write "NA".  
+You will be asked to enter the following:  
+- Your personal ReprothonID which you should have received via email   
+- Copy and paste the URL link to the question on StackOverflow  
+- The R libraries (package) used in the accepted answer. In case there are multiple libraries, separate library names by "#". If the accepted solution uses base R functions, add "base".  
+- Click whether you passed or failed to reproduce the question with the accepted solution provided. If you are unsure whether you reproduced the accepted solution correctly click Unsure. If no reproducible example was provided please select this option.  
+- Write the name of the R-library (package) that caused the error, if no error write "NA". Please note that this is case sensitive.  
+- write the function that caused the error, if no error write "NA". Please note that this is case sensitive. 
 
 <p align=centre>
 <img src="../images/fill_gform2.png" style="max-width:100%;">
 </p>
 <br>
 
-Lastly, fill in:   
-- copy and paste the code from R into the form.  
-- add any comments.  
+Lastly,:   
+- Copy and paste the all the code from your R console into the form, including code taken from the original question as well as its answer, if required.  
+- Add any comments.  
 - click submit.  
  
  
@@ -128,8 +114,8 @@ Lastly, fill in:
 **Congrats !!**  
 **You did it!!**  
 **Thank you so much for contributing!!**   
-
-Take on another question from the Question_ID_Generator and don't forget to reload your R before starting to reproduce.  
+{insert cute you rock kitten meme here}
+Take on another question from the [<span style="color: blue">Question Generator</span>](https://shiny.abdn.ac.uk/biostat/Reprothon/) and don't forget to reload your R before starting to reproduce.  
 
 <p align=centre>
 <img src="../images/submit2.png" style="max-width:70%;">
@@ -138,4 +124,4 @@ Take on another question from the Question_ID_Generator and don't forget to relo
 
 ## Common problems while reproducing  
 
-Reproducing code is sometimes not easy. Check out the next Tutorial [<span style="color: blue">here</span>](link) about solutions to common problems when reproducing code on StackOverflow.  
+Reproducing code is not always easy, in fact it rarely is! Check out the next Tutorial [<span style="color: blue">here</span>](link) about solutions to common problems when reproducing code on StackOverflow.  
