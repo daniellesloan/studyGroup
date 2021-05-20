@@ -13,7 +13,7 @@ tags:
 
 Hello fellow Hacker,  
 
-here we provide an example of how the data collection for the Reprothon 2021 looks like. If you want some basic information how you can contribute, please see the [<span style="color: blue">"How To Get Started" guide.</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/)
+here we provide an example of how the data collection for the Reprothon 2021 looks like. If you want some basic information how you can contribute, please see the [<span style="color: blue">"How To Get Started" guide.</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/How_to_get_started_Reprothon2021/)
 
 
 ### Get a StackOverflow question
