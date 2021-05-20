@@ -32,7 +32,7 @@ Here is a link to StackOverflow https://stackoverflow.com/
 
 
 <p align=centre>
-<img src="../images/stack_example2.png" style="max-width:50%;">
+<img src="../images/stack_example2.png" style="max-width:70%;">
 </p>
 
 ## Reproduce the accepted answer to the question
@@ -40,7 +40,7 @@ Here is a link to StackOverflow https://stackoverflow.com/
 **3. Familiarize yourself with the question**  
 
 <p align=centre>
-<img src="../images/stack_example3.png">
+<img src="../images/stack_example3.png" style="max-width:70%;">
 </p>
 
 **4. Look for the accepted answer**  
@@ -48,7 +48,7 @@ Here is a link to StackOverflow https://stackoverflow.com/
 The accepted answer shows a green tickmark and is usually the first answer after the question.
 
 <p align=centre>
-<img src="../images/stack_example4.png">
+<img src="../images/stack_example4.png" style="max-width:70%;">
 </p>
 
 **5. Open a new R or Rstudio session**  
@@ -56,7 +56,7 @@ The accepted answer shows a green tickmark and is usually the first answer after
 Please always restart R before reproducing a question.
 
 <p align=centre>
-<img src="../images/open_r.png">
+<img src="../images/open_r.png" style="max-width:70%;">
 </p>
 
 **6. Reproduce accepted answer**  
@@ -64,11 +64,11 @@ Please always restart R before reproducing a question.
 In this example it is straight forward to just copy and paste the accepted solution from StackOverflow into R.
 
 <p align=centre>
-<img src="../images/copy_paste_stack.png">
+<img src="../images/copy_paste_stack.png" style="max-width:70%;">
 </p>
 
 <p align=centre>
-<img src="../images/copy_paste_stack_r.png">
+<img src="../images/copy_paste_stack_r.png" style="max-width:70%;">
 </p>
 
 In this example, the code provided in the answer was missing the function to load the package used. Add the code to load the appropriate package with functions `require()` or `library()`.
@@ -76,7 +76,7 @@ In this example, the code provided in the answer was missing the function to loa
 In other cases you might have to install new packages before you can proceed to reproduce the example.
 
 <p align=centre>
-<img src="../images/r_pass.png">
+<img src="../images/r_pass.png" style="max-width:70%;">
 </p>
 
 
@@ -93,7 +93,7 @@ First fill in:
 - the year the Question was posted, you can find this above the Username.  
 
 <p align=centre>
-<img src="../images/fill_gform1.png">
+<img src="../images/fill_gform1.png" style="max-width:70%;">
 </p>
 
 
@@ -104,7 +104,7 @@ Then, fill in:
 - write the function that caused the error, if no error write "NA".  
 
 <p align=centre>
-<img src="../images/fill_gform2.png">
+<img src="../images/fill_gform2.png" style="max-width:70%;">
 </p>
 
 
@@ -115,7 +115,7 @@ Lastly, fill in:
  
  
 <p align=centre>
-<img src="../images/fill_gform3.png">
+<img src="../images/fill_gform3.png" style="max-width:70%;">
 </p>
 
 
@@ -126,10 +126,10 @@ Lastly, fill in:
 Take on another question from the Question_ID_Generator and don't forget to reload your R before starting to reproduce.  
 
 <p align=centre>
-<img src="../images/submit2.png">
+<img src="../images/submit2.png" style="max-width:70%;">
 </p>
 <br>
 </br>
 ## Common problems while reproducing  
 
-Reproducing code is sometimes not easy. Check out the next Tutorial about solutions to common problems when reproducing code on StackOverflow (link) .  
+Reproducing code is sometimes not easy. Check out the next Tutorial [here](link) about solutions to common problems when reproducing code on StackOverflow.  
