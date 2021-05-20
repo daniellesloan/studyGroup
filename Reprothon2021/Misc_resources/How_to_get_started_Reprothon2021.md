@@ -68,10 +68,10 @@ Otherwise use the R.Version function to check
 <img src="../images/R_version2.png">
 </p>
 
-In case you have an earlier Version than 4, follow this link to update your R version https://uvastatlab.github.io/phdplus/installR.html 
+In case you have an earlier Version than 4, follow this link to update your R version: (https://uvastatlab.github.io/phdplus/installR.html)  
 
 
 ## Check out tutorials  
-See this tutorial for a basic data entry example: https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/
+See this tutorial for a [basic data entry example](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_easy_Reprothon2021/)
 See this tutorial that deals with common problems arising when replicating StackOverflow questions. (Link)
 
