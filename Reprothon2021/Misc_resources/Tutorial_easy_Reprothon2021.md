@@ -19,66 +19,71 @@ here we provide an example of how the data collection for the Reprothon 2021 loo
 ## Get a StackOverflow question
 
 **1. Click on the Question_ID_Generator to obtain a question**  
+
 Here is a link at the Question_ID_Generator
 
 <p align=centre>
-<img src="./images/confused_cat1.jpg">
+<img src="../images/confused_cat1.jpg">
 </p>
 
 **2. Copy and paste the Question ID into the StackOverflow search bar and click enter**  
+
 Here is a link to StackOverflow https://stackoverflow.com/
 
 
 <p align=centre>
-<img src="./images/stack_example2.png">
+<img src="../images/stack_example2.png">
 </p>
 
 ## Reproduce the accepted answer to the question
 
 **3. Familiarize yourself with the question **  
 
-
 <p align=centre>
-<img src="./images/stack_example3.png">
+<img src="../images/stack_example3.png">
 </p>
 
 **4. Look for the accepted answer **  
+
 The accepted answer shows a green tickmark and is usually the first answer after the question.
 
 <p align=centre>
-<img src="./images/stack_example4.png">
+<img src="../images/stack_example4.png">
 </p>
 
 **5. Open a new R or Rstudio session **  
+
 Please always restart R before reproducing a question.
 
 <p align=centre>
-<img src="./images/open_r.png">
+<img src="../images/open_r.png">
 </p>
 
 **6. Reproduce accepted answer **  
+
 In this example it is straight forward to just copy and paste the accepted solution from StackOverflow into R.
 
 <p align=centre>
-<img src="./images/copy_paste_stack.png">
+<img src="../images/copy_paste_stack.png">
 </p>
 
 <p align=centre>
-<img src="./images/copy_paste_stack_r.png">
+<img src="../images/copy_paste_stack_r.png">
 </p>
 
-In this example, the code provided in the answer was missing the function to load the package used. Add the code to load the appropriate package with functions require() or library().
+In this example, the code provided in the answer was missing the function to load the package used. Add the code to load the appropriate package with functions `require()` or `library()`.
 
 In other cases you might have to install new packages before you can proceed to reproduce the example.
 
 <p align=centre>
-<img src="./images/r_pass.png">
+<img src="../images/r_pass.png">
 </p>
 
 
 ## Fill out the GoogleForm 
 
 **7. Fill out the Form**  
+
 We should have sent you an email including a link to the GoogleForm, otherwise ask a fellow hacker for help.  
 
 First fill in:  
@@ -88,7 +93,7 @@ First fill in:
 - the year the Question was posted, you can find this above the Username.  
 
 <p align=centre>
-<img src="./images/fill_gform1.png">
+<img src="../images/fill_gform1.png">
 </p>
 
 
@@ -99,7 +104,7 @@ Then, fill in:
 - write the function that caused the error, if no error write "NA".  
 
 <p align=centre>
-<img src="./images/fill_gform2.png">
+<img src="../images/fill_gform2.png">
 </p>
 
 
@@ -110,7 +115,7 @@ Lastly, fill in:
  
  
 <p align=centre>
-<img src="./images/fill_gform3.png">
+<img src="../images/fill_gform3.png">
 </p>
 
 
@@ -121,7 +126,7 @@ Lastly, fill in:
 Take on another question from the Question_ID_Generator and don't forget to reload your R before starting to reproduce.  
 
 <p align=centre>
-<img src="./images/submit2.png">
+<img src="../images/submit2.png">
 </p>
 
 ## Common problems while reproducing  
