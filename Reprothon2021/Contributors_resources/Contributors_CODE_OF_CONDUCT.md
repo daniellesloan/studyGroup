@@ -5,7 +5,7 @@ output: html_document
 visible: true
 tags:
   # repro
-  - Contributors
+  - Codes of Conduct
 ---
 
 ## Our Pledge
