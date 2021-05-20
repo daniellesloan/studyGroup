@@ -6,7 +6,7 @@ output: html_document
 visible: true
 tags:
   # repro
-  - Contributors
+  - Resources
 ---
 
 Registration is now open for the Aberdeen Study Group Reprothon! The Reprothon officially starts on the 9th June 2021, 16:00 – 18:00 UK time. During those two hours, we will be hosting an event in Microsoft Teams where you can work alongside others and ask questions. Don’t worry if you can’t join during those hours, the Reprothon will be live until further notice so you can take part at a time that suits you. 
