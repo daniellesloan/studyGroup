@@ -1,6 +1,10 @@
 ---
-title: "How to get started guide"
+title: "Signing up to the Reprothon & updating R"
 output: html_document
+visible: true
+tags:
+  # repro
+  - Resources
 ---
 
 **Author**: Max Tschol 
