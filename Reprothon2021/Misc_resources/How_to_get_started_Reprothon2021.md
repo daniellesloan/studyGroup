@@ -29,7 +29,7 @@ Check out the general data generating process below.
 **3. Fill out Google Form "Reprothon2021_data_entry"**  
 
 <p align=left>
-<img src="./images/workflow.png">
+<img src="../images/workflow.png">
 </p>
 
 ## 4 quick steps how you can contribute 
