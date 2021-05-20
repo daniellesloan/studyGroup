@@ -1,11 +1,14 @@
 ---
-title: "Signing up to the Reprothon & updating R"
+title: "How to Get Started"
 output: html_document
 visible: true
 tags:
   # repro
   - Resources
 ---
+
+
+# How to Get Started
 
 **Author**: Max Tschol 
 **Date**: 18 May 2021
