@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How to Join in"
+title: "How to Sign Up"
 author: "Maria Kamouyiaros"
 output: html_document
 visible: true
