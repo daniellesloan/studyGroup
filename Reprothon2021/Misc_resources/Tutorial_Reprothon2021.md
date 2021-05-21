@@ -27,11 +27,11 @@ Here is a link to the [<span style="color: blue">Question Generator</span>](http
 </p>
 
 
-### Reproduce the accepted answer to the question
+### Test the accepted answer to the question
 
 **2. Familiarize yourself with the question**  
 
-Read through the question, comments, code and answers to make sure you understand what the question is asking. If there is anything unsual here you can look at our troubleshooting guide(link) and/or include it in the "comments" seciton of the data entry form.
+Read through the question, comments, code and answers to make sure you understand what the question is asking. If there is anything unsual here you can look at our troubleshooting guide(link) and/or include it in the "comments" seciton of the data entry form. If in doubt ask one of the admin team!
 
 
 <p align=centre>
