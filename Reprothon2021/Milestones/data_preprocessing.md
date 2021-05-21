@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Data Preprocessing - The backstory"
+title: "The Raw Data"
 author: "Maria Kamouyiaros"
 output: html_document
 visible: true
