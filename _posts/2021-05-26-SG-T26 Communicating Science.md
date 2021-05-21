@@ -1,6 +1,6 @@
 ---
-title: Communicating science: advice from three science communicators.
-text: Here from three science communicators and ask them questions.
+title: Communicating science.
+text: Hear from three science communicators and ask them questions.
 location: MS Teams
 link: https://github.com/AberdeenStudyGroup/studyGroup/issues/68
 date: 2021-05-26
