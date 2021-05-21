@@ -83,7 +83,7 @@ In other cases you might have to install new packages before you can reproduce t
 
 ## Filling out the data collection form 
 
-**6. The googleForm**  
+**6. The Reprothon2021 Data Entry Google Form**  
 
 Click this [<span style="color: blue">link</span>](https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform) to access the Data Entry form. 
 
