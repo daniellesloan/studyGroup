@@ -20,7 +20,7 @@ In this tutorial we provide an example of what the data collection for the 2021 
 
 **1. Click on the link below to obtain a question**  
 
-Here is a link to the [<span style="color: blue">Question Generator</span>](https://shiny.abdn.ac.uk/biostat/Reprothon/) which will take you to our ShinyApp. Press teh button "Get A New Sample" and this will generate a link to a StackOverflow question, please click this link!
+Here is a link to the [<span style="color: blue">Question Generator</span>](https://shiny.abdn.ac.uk/biostat/Reprothon/) which will take you to our ShinyApp. Press the button "Get A New Sample" and this will generate a link to a StackOverflow question, please click this link!
 
 <p align=centre>
 <img src="../images/confused_cat1.jpg" style="max-width:100%;">
