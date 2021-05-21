@@ -1,5 +1,5 @@
 ---
-title: "How to Get Started"
+title: "2. Getting Started"
 output: html_document
 visible: true
 tags:
