@@ -29,7 +29,8 @@ A detailed how-to guide will be published to take you through the process step-b
 ### Sharing your story
 Part of open science is connecting and sharing our work and experiences. We encourage you to post updates in the MS Teams chat and on social media. If you’re on Twitter, you can use and follow the `#Reprothon2021` and `#Hackers2021` hashtags to share your experience and see what others are up to.  
 
-
+<br></br>
+<br></br>
 <div>
   <h4 id="Shortcuts">Quick Links</h4>
 <li>
