@@ -28,3 +28,15 @@ A detailed how-to guide will be published to take you through the process step-b
 
 ### Sharing your story
 Part of open science is connecting and sharing our work and experiences. We encourage you to post updates in the MS Teams chat and on social media. If you’re on Twitter, you can use and follow the `#Reprothon2021` and `#Hackers2021` hashtags to share your experience and see what others are up to.  
+
+
+<div>
+  <h4 id="Shortcuts">Quick Links</h4>
+<li>
+  <a href="https://forms.gle/u4QcUBRfieV2H7fV9" style="color:DodgerBlue">Registration</a></li>
+<li>
+  <a href="https://shiny.abdn.ac.uk/biostat/Reprothon/" style="color:DodgerBlue">Question Generator</a></li>
+<li>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform" style="color:DodgerBlue">Reprothon 2021 Data Entry Form</a></li>
+  
+</div>
