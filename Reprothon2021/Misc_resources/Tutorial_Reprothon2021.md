@@ -31,7 +31,7 @@ Here is a link to the [<span style="color: blue">Question Generator</span>](http
 
 **2. Familiarize yourself with the question**  
 
-Read through the question, comments, code and answers to make sure you understand what the question is asking. If there is anything unsual here you can look at our troubleshooting guide(link) and/or include it in the "comments" seciton of the data entry form. If in doubt ask one of the admin team!
+Read through the question, comments, code and answers to make sure you understand what the question is asking. If there is anything unsual here you can look at our troubleshooting guide(link) and/or include it in the "comments" section of the data entry form. If in doubt ask one of the admin team!
 
 
 <p align=centre>
@@ -72,7 +72,7 @@ In this example, you can just copy and paste the accepted solution from StackOve
 
 In this example, the code provided in the answer was missing the function to load the package used. Add the code required to load the appropriate package with functions `require()` or `library()`.
 
-In other cases you might have to install new packages before you can reproduce the example.
+In other cases you might have to install new packages before you can reproduce the example. Sometimes the code generating the example will only be provided in the question and not the answer provided, you should then copy the code that generates the data from the question.   Check if your own solution reproduces the output of the solution on Stack Overflow.
 
 <br>
 
