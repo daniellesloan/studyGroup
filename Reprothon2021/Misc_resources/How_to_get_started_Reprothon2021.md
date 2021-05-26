@@ -7,9 +7,6 @@ tags:
   - Resources
 ---
 
-**Author**: Max Tschol 
-**Date**: 18 May 2021
-
 
 
 Hello fellow Hacker!
