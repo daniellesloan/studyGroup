@@ -20,12 +20,17 @@ The aim of the Reprothon is to test whether the accepted answers to questions on
 **1. Sign up for Reprothon event**  
 Make sure you've signed up to the Reprothon by following this [<span style="color: blue">link.</span>](https://docs.google.com/forms/d/e/1FAIpQLScnZ58LT9lgCHWgHK0JFD-1CPEOyZPcWdCM3VBxDdnXDgQ_AA/viewform)
 
+<p align=center>
+<img src="../images/event_registration1.png" style="max-width:100%;">
+</p>
+<br>
+
 **2. Check your email for your personal ReprothonID**  
 
 You will receive an unique 4 digit ID number shortly after registering. Save the email or take note of your ID number, you will need it when entering your results into the Google form later.
 
 <p align=center>
-<img src="../images/confused_cat1.jpg" style="max-width:100%;">
+<img src="../images/email_registration.png" style="max-width:100%;">
 </p>
 <br>
 
@@ -34,7 +39,7 @@ You will receive an unique 4 digit ID number shortly after registering. Save the
 Open up the links to the [<span style="color: blue">Question Generator</span>](https://shiny.abdn.ac.uk/biostat/Reprothon/) and [<span style="color: blue">Google form</span>](https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform) in your browser, it may be handy to keep them open!
 
 <p align=center>
-<img src="../images/confused_cat1.jpg" style="max-width:100%;">
+<img src="../images/form_generator1.png" style="max-width:100%;">
 </p>
 <br>
 
