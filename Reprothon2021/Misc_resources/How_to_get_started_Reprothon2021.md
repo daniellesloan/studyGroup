@@ -76,6 +76,6 @@ In case you have an earlier Version than 4, follow this link to update your R ve
 
 ## What's next?
 
-See this [<span style="color: blue">"How to Guide"</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_Reprothon2021/>) for more information on how to generate your question and complete the Reprothon Data entry form.
+See this [<span style="color: blue">"How to Guide"</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_Reprothon2021/) for more information on how to generate your question and complete the Reprothon Data entry form.
 
 ### Thanks so much for joining us!
