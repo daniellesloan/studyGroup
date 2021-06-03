@@ -122,9 +122,9 @@ Take on another question from the [<span style="color: blue">Question Generator<
 </p>
 <br>
 
-## Common problems while reproducing  
+### Common problems while reproducing  
 
-Reproducing code is not always easy, in fact it rarely is! Check out the next Tutorial [<span style="color: blue">here</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/faq/) about solutions to common problems when reproducing code on StackOverflow.  
+Reproducing code is not always easy, in fact it rarely is! Check out the [<span style="color: blue">FAQ</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/faq/) about solutions to common problems when reproducing code on StackOverflow.  
 
 
 <br>
