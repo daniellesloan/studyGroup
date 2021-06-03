@@ -79,3 +79,18 @@ In case you have an earlier Version than 4, follow this link to update your R ve
 See this [<span style="color: blue">"How to Guide"</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/Tutorial_Reprothon2021/) for more information on how to generate your question and complete the Reprothon Data entry form.
 
 ### Thanks so much for joining us!
+
+
+
+<br>
+<br>
+<div>
+  <h4 id="Shortcuts">Quick Links</h4>
+<li>
+  <a href="https://forms.gle/u4QcUBRfieV2H7fV9" style="color:DodgerBlue">Registration</a></li>
+<li>
+  <a href="https://shiny.abdn.ac.uk/biostat/Reprothon/" style="color:DodgerBlue">Question Generator</a></li>
+<li>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform" style="color:DodgerBlue">Reprothon 2021 Data Entry Form</a></li>
+  
+</div>
