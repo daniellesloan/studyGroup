@@ -125,3 +125,17 @@ Take on another question from the [<span style="color: blue">Question Generator<
 ## Common problems while reproducing  
 
 Reproducing code is not always easy, in fact it rarely is! Check out the next Tutorial [<span style="color: blue">here</span>](https://aberdeenstudygroup.github.io/studyGroup/Reprothon2021/Misc_resources/faq/) about solutions to common problems when reproducing code on StackOverflow.  
+
+
+<br>
+<br>
+<div>
+  <h4 id="Shortcuts">Quick Links</h4>
+<li>
+  <a href="https://forms.gle/u4QcUBRfieV2H7fV9" style="color:DodgerBlue">Registration</a></li>
+<li>
+  <a href="https://shiny.abdn.ac.uk/biostat/Reprothon/" style="color:DodgerBlue">Question Generator</a></li>
+<li>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScnkiWlEgSmdAfwQjN-AvkqPmjAMi-D947jAr2YcABiEMYU9g/viewform" style="color:DodgerBlue">Reprothon 2021 Data Entry Form</a></li>
+  
+</div>
