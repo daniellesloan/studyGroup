@@ -60,7 +60,7 @@ Otherwise use the R.Version function to check:
 <img src="../images/R_version2.png" style="max-width:100%;">
 </p>
 <br>
-In case you have an earlier Version than 4, follow this link to update your R version: <span style="color: blue">https://uvastatlab.github.io/phdplus/installR.html</span>
+In case you have an earlier Version than 4, follow this link to update your R version: <span style="color: blue"><https://uvastatlab.github.io/phdplus/installR.html></span>
 
 
 ### Now you're ready to get started! The process is simple!
