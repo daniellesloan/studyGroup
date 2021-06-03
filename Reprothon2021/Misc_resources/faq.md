@@ -14,8 +14,7 @@ tags:
 Here is a list of common issues you might run into while trying to reproduce code. We hope this list provides you with an easy solution so you can move on swiftly to the next question. In case you are unsure or have any further questions, get in contact with the organiser team.  
 
 
-**I can't find my Reprothon ID**
-
+**I can't find my Reprothon ID**  
 If you can’t find it ask one of the organisers and they'll be able to find it for you. 
 
 **Question Generator does not work**  
@@ -46,8 +45,7 @@ If the question or answer does not provide reproducible code by for instance not
 If you feel like you can easily create the data that is used in the question/answer then go ahead. If you find yourself struggling then click "No reproducible example provided" in the google form.
 
 
-**What if a dataset is used but is not explicitly specified? E.g. if a datatset (movies) comes from an uninstalled package (“ggplot2movies”)**
-
+**What if a dataset is used but is not explicitly specified? E.g. if a datatset (movies) comes from an uninstalled package (“ggplot2movies”)**  
 Like the previous question, it’s up to you how much time you put into testing the code. There are a few datasets that are commonly used in accepted answers to demonstrate how the code works if data was not provided in the original question. Some example datasets are `mtcars` and `iris` that come in-built with R, and `movies` (from the package `ggplot2movies`). If there is a way for you to replicate the accepted answer solution without the dataset provided then you can still fill in the answer sheet, alternatively enter “No reproducible example provided” in the google form before moving on to the next StackOverflow question.
 
 
