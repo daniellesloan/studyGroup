@@ -21,7 +21,7 @@ The aim of the Reprothon is to understand the longevity and reproducibility of R
 
 When the Reprothon has started you will be allocated one query at a time via our website - the link will be published when the Reprothon begins. Your job will be to work through that query to find out whether or not the accepted answer still works. Once you've done that, you will upload your results via a Google Form, and you can move on to another query - you can do as many as you like! 
 
-If you want to make your contribution to Reprothon more interactive, why not set up a team with your friends or colleagues? You will all still use your individual ID when submitting results but could set up a working space for you and your group to chat together as you work through your queries. If you don’t have a team but would like to join one, let us know by emailing [<span style="color: blue"><aberdeenstudygroup@gmail.com></span>] and we’ll pair you with someone! 
+If you want to make your contribution to Reprothon more interactive, why not set up a team with your friends or colleagues? You will all still use your individual ID when submitting results but could set up a working space for you and your group to chat together as you work through your queries. If you don’t have a team but would like to join one, let us know by emailing [<span style="color: blue">aberdeenstudygroup@gmail.com</span>](mailto:aberdeenstudygroup@gmail.com?subject=[ASG]%20Reprothon%20Team%20Request) and we’ll pair you with someone! 
 
 A detailed how-to guide will be published to take you through the process step-by-step. If you have any questions, we will be around to help you out in the Microsoft Teams channel or via social media. 
 
