@@ -22,7 +22,7 @@ The Question Generator might not give you a question if you are using a VPN conn
 
 
 **The Stack Overflow question and answer do not specify the library used**  
-If neither the question nor the answer specify any library they might just use base R functions. In this case, write base R in libraries used. Otherwise you might find the library by searching functions at https://www.rdocumentation.org/ .
+If neither the question nor the answer specify any library they might just use base R functions. In this case, write base R in libraries used. Otherwise you might find the library by searching functions at <span style="color: blue"><https://www.rdocumentation.org/></span>.
 
 
 **The question link leads you to a question marked as "duplicate question"**  
