@@ -101,7 +101,7 @@ You will be asked to enter the following:
 <br>
 
 Lastly,:   
-- Copy and paste the all the code from your R console into the form, including code taken from the original question as well as its answer, if required.  
+- Copy and paste the all the code from your R console into the form, including code taken from the original question and its accepted answer, if required.  
 - Add any comments.  
 - click submit.  
  
