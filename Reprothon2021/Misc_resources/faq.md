@@ -1,6 +1,5 @@
 ---
 title: "4. FAQ"
-author: "Max Tschol"
 output:
   html_document:
     toc: true
@@ -30,7 +29,7 @@ In that case go to the link suggested and reproduce the code of that question. D
 
 
 **What if half of the answer works and the other half does not?**  
-By letting us know which packages the question/answer used and which packages and functions produce an error you give as all the information we need. 
+Make a note in the comments section of the Google form which packages the question/answer used and which packages and functions produce an error.
 
 
 **What to do when the accepted answer doesn't provide code, while another answer provides valid code?**  
