@@ -49,8 +49,15 @@ If you feel like you can easily create the data that is used in the question/ans
 Like the previous question, it’s up to you how much time you put into testing the code. There are a few datasets that are commonly used in accepted answers to demonstrate how the code works if data was not provided in the original question. Some example datasets are `mtcars` and `iris` that come in-built with R, and `movies` (from the package `ggplot2movies`). If there is a way for you to replicate the accepted answer solution without the dataset provided then you can still fill in the answer sheet, alternatively enter “No reproducible example provided” in the google form before moving on to the next StackOverflow question.
 
 
+**What if it's not a package or function causing an error?**
+The original StackOverflow question does not need to be about an error in the author’s R code: What is relevant for the Reprothon is that the accepted answer provides a sample of code that was deemed to be working at the time it was posted, so we can check if it still works now.
 
 
+**What if I get the error message Error in [X] : could not find function "[Y]"**
+
+This could be that the code omitted loading the necessary package (in this case, see "The Stack Overflow question and answer do not specify the library used above”), or that the function is no longer part of the package. The latter case (only) is a failure to reproduce.
+
+ 
 <br>
 <br>
 <div>
