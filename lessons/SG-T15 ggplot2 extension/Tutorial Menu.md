@@ -14,6 +14,8 @@ tags:
 
 ## ggplot2 Refresher Tutorial
 
+Updated: 05/10/21 
+
 Welcome to the class! The workshop format means you can choose your tutorial based on your comfort level with using ggplot2. For this reason I have divided the class into a menu of resources associated with starters (beginners), mains (middle level) & desserts (extended level). A summary list is provided in the image below and the sections underneath will take you to the links belonging to each topic level (in addition to information on how to find relevent datasets and extra information on colour schemes etc).
 
 **Figure 1, Overview of tutorial options for the workshop.**
@@ -73,6 +75,7 @@ Resource                                 | Link
 Animating your plots                     | <https://gganimate.com/articles/gganimate.html OR https://gganimate.com/>
 Explore ggplot2 extension packages       | <https://exts.ggplot2.tidyverse.org/gallery/>
 Make an interactive ggplot               | <https://www.r-graph-gallery.com/bubble_chart_interactive_ggplotly.html>
+Creating your own colour palettes        | <https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2>
 
 
 ### Everyone
