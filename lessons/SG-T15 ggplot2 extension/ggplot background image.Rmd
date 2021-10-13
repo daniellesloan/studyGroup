@@ -1,0 +1,77 @@
+---
+title: "Background Image to ggplot2"
+author: "Alexandra Jebb"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    toc_depth: 4
+    toc: true
+    toc_float: true
+---
+
+## Objectives
+$~$
+To learn how to add a background image into your ggplot
+$~$
+## Code
+$~$
+### Loaded Packages
+$~$
+```{r}
+#plot nice plots
+library(ggplot2)
+
+#handle png images
+library(png)
+```
+$~$
+### Read in Data
+$~$
+Save the iris dataset to the environment and check the structure
+$~$
+```{r}
+#save the iris dataset
+iris <- iris
+
+#check the dataset structure
+str(iris)
+```
+$~$
+### Create the plot
+$~$
+Read in the background image from the r project directory
+$~$
+```{r}
+#read in image
+img <- readPNG("Iris background.png")
+```
+$~$
+Create plot
+$~$
+```{r}
+# Name plot and specify aesthetics
+iris.plot <- ggplot(iris, aes(Species, Sepal.Length)) +
+  #Create image layer (must be first to be at the back of the graph)
+             background_image(img) +
+  #Create boxplot geom
+             geom_boxplot(aes(fill = Species), alpha = 0.6, lwd = 1.0, fatten = 1.0) +
+  #Set overall theme of plot
+             theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                   panel.background = element_blank(), 
+                   panel.border = element_rect(colour = "black", fill = NA, size = 1),
+                   axis.title.y = element_text(size = 20, margin = margin(r = 15)),
+                   axis.title.x = element_text(size = 20, margin = margin(t = 15)),
+                   axis.text = element_text(size = 15),
+                   legend.position = "none") +
+  #Set the colour fill of each boxplot
+             scale_fill_manual(values = c("#DEC3A3", "#7B5877", "#C4726E")) +
+  #Set labels for axes
+             scale_x_discrete(labels = c("Setosa", "Versicolor", "Virginica")) +
+             ylab("Sepal Length")
+
+
+
+iris.plot
+```
+
+
