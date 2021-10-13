@@ -76,6 +76,7 @@ Animating your plots                     | <https://gganimate.com/articles/ggani
 Explore ggplot2 extension packages       | <https://exts.ggplot2.tidyverse.org/gallery/>
 Make an interactive ggplot               | <https://www.r-graph-gallery.com/bubble_chart_interactive_ggplotly.html>
 Creating your own colour palettes        | <https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2>
+Adding a background image                |<https://github.com/AberdeenStudyGroup/studyGroup/blob/gh-pages/lessons/SG-T15%20ggplot2%20extension/ggplot%20background%20image.Rmd>
 
 
 ### Everyone
