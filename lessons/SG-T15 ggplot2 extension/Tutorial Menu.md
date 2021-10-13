@@ -85,6 +85,7 @@ Here is a list of resources that everyone can use to pick colour schemes, change
 
 Resource                              | Link                                                                              
 --------------------------------------|-----------------------------------------------------------------------------------
+ggplot cheatsheet                     | <https://www.rstudio.com/resources/cheatsheets/> 
 Colours for base R                    | <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>
 Colour-blind friendly palettes        | <https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html>
 Colour palettes with RColorBrewer     | <https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/>
